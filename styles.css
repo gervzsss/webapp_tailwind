@@ -1,1 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quintessential&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @import "tailwindcss";
+@theme {
+    --font-GreatVibes: "Great Vibes", sans-serif;
+    --font-Quintessential: "Quintessential", sans-serif;
+    --font-Tinos: "Tinos", sans-serif;
+    --font-RobotoCondensed: "Roboto Condensed", sans-serif;
+}
+
+@keyframes animate {
+  from {
+    text-shadow: 0 0 5px #f6f4f3, 0 0 10px #ffc107;
+  }
+
+  to {
+    text-shadow: 0 0 20px #f6f4f3, 0 0 40px #ffc107;
+  }
+}
+nav .text-4xl{
+  animation: animate 1s infinite alternate;
+}
+header h1{
+  
+  animation: animate 1s infinite alternate;
+}
+section h2  {
+  
+  animation: animate 1s infinite alternate;
+}
