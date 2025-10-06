@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Promise</title>
+
+  <link rel="stylesheet" href="dist/styles.css">
+</head>
+
+<body class="bg-black flex flex-col min-h-screen">
+
+  <!-- NAVBAR -->
+  <nav class="bg-black">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="#" class="text-5xl text-amber-300 hover:text-amber-500 font-GreatVibes "> Pro<span
+          class="hover:text-amber-300 text-amber-50 font-GreatVibes">mise</span></a>
+      <ul class="flex space-x-20 text-2xl text-amber-50">
+        <li><a href="/home.html" class="hover:text-yellow-600">Home</a></li>
+        <li><a href="/products.html" class="hover:text-yellow-600">Products</a></li>
+        <li><a href="/about.html" class="hover:text-yellow-600">About</a></li>
+        <li><a href="/cart.html" class="hover:text-yellow-600">🛒 Cart</a></li>
+      </ul>
+      <a href="#"
+        class="text-amber-50 bg-amber-600 font-sans font-bold px-5 py-2 rounded-lg hover:bg-[#FF8C00] hover:text-white shadow-[0_0_10px_#FF8C00] hover:shadow-[0_0_20px_#FF8C00] transition-all duration-300">Log
+        In</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="text-center text-white py-20 px-52 bg-cover bg-center"
+    style="background-image: url('images/background.png');">
+    <h1 class="text-6xl font-GreatVibes text-amber-50 ">About <span class="text-amber-300">Promise</span></h1>
+    <p class="p-4 text-2xl">Crafting memorable looks for your most important day — with care, heritage, and modern
+      tailoring.</p>
+  </header>
+
+  <main class="container mx-auto py-12">
+    <!-- Story & Image -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-12">
+      <div>
+        <h2 class="text-3xl font-semibold mb-4 text-white">Our Story</h2>
+        <p class="text-white/80 leading-relaxed mb-4">Promise was founded to bring beautifully crafted wedding
+          attire to couples who want timeless elegance with modern comfort. We blend artisanal techniques with
+          carefully chosen fabrics, focusing on fit, detail and sustainable practices. Our mission is to make
+          every couple feel confident and celebrated.</p>
+        <ul class="text-sm text-white/70 space-y-2">
+          <li><span class="font-semibold text-white">Mission:</span> Timeless design with exceptional
+            craftsmanship.</li>
+          <li><span class="font-semibold text-white">Values:</span> Integrity, quality, and compassionate
+            service.</li>
+          <li><span class="font-semibold text-white">What makes us unique:</span> Personalized fittings,
+            curated fabrics, and small-batch production.</li>
+        </ul>
+      </div>
+
+      <div class="rounded-lg overflow-hidden">
+        <img src="images/Groom Wear For Indian Wedding Indian Wedding Sherwani For Groom.jpg" alt="Our Atelier"
+          class="w-full h-80 object-cover rounded-lg shadow-lg" />
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold mb-4">Our Process</h2>
+      <p class="text-white/80 leading-relaxed">From initial design sketches to the final fitting, our process
+        centers on collaboration. We consult closely with you to select fabrics, refine silhouettes, and ensure
+        your dress or suit reflects your vision. Small production runs allow for careful quality control at
+        every stage.</p>
+    </section>
+
+    <!-- Contact box with form + map -->
+    <section class="bg-gray-800 rounded-lg p-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Contact Us</h3>
+        <p class="text-white/80 mb-4">Have questions or want to schedule a fitting? Send us a message and we'll
+          get back to you within 48 hours.</p>
+        <form class="space-y-3">
+          <div>
+            <label class="block text-sm text-white/80 mb-1">Name</label>
+            <input class="w-full rounded-md px-3 py-2 text-black" />
+          </div>
+          <div>
+            <label class="block text-sm text-white/80 mb-1">Email</label>
+            <input class="w-full rounded-md px-3 py-2 text-black" />
+          </div>
+          <div>
+            <label class="block text-sm text-white/80 mb-1">Subject</label>
+            <input class="w-full rounded-md px-3 py-2 text-black" />
+          </div>
+          <div>
+            <label class="block text-sm text-white/80 mb-1">Message</label>
+            <textarea class="w-full rounded-md px-3 py-2 text-black h-32"></textarea>
+          </div>
+          <button
+            class="w-full bg-amber-500 text-black px-4 py-3 rounded-md font-semibold hover:shadow-[0_0_25px_#FFD600] transition">Send
+            Message</button>
+        </form>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Visit or write to us</h3>
+        <div class="text-white/80 mb-4">
+          <p>Promise Atelier</p>
+          <p>0321 December Avenue</p>
+          <p>Philippines</p>
+          <p>Email: <a href="mailto:regine&gervs@email.com" class="text-amber-300 underline">regine&gervs@email.com</a>
+          </p>
+          <p>Phone: <a href="tel:+639121234567" class="text-amber-300 underline">+63 912 123 4567</a></p>
+        </div>
+
+        <div class="mt-4 bg-black rounded-md p-2 shadow-inner">
+          <img src="images/maps.png" alt="Map" class="w-full h-48 object-cover rounded-md border border-[#101214]" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white text-center p-3 mt-3">
+    © 2025 <span class="text-amber-500 font-GreatVibes text-3xl">Pro</span><span class="font-GreatVibes text-3xl">mise
+    </span> | Designed for loving couple
+  </footer>
+
+</body>
+
+</html>
