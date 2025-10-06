@@ -7,64 +7,127 @@
 
   <link rel="stylesheet" href="dist/styles.css">
 </head>
-<body class="flex flex-col min-h-screen">
+<body class="bg-black flex flex-col min-h-screen">
 
   <!-- NAVBAR -->
-  <nav class="bg-gray-900 text-white">
+  <nav class="bg-black">
+    
     <div class="container mx-auto flex justify-between items-center p-4">
-      <a href="#" class="font-bold text-xl">E-Shop</a>
-      <ul class="flex space-x-6">
-        <li><a href="#" class="hover:text-yellow-400">Home</a></li>
-        <li><a href="#" class="hover:text-yellow-400">Products</a></li>
-        <li><a href="#" class="hover:text-yellow-400">About</a></li>
-        <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
-        <li><a href="#" class="hover:text-yellow-400">🛒 Cart</a></li>
+      <a href="#" class="pl-20 text-5xl text-amber-300 hover:text-amber-500 font-GreatVibes "> Pro<span class= "hover:text-amber-300 text-amber-50 font-GreatVibes">mise</span></a>
+      <ul class="flex space-x-20 text-1xl text-amber-50">
+        <li><a href="#" class="hover:text-yellow-600">Home</a></li>
+        <li><a href="#" class="hover:text-yellow-600">Products</a></li>
+        <li><a href="#" class="hover:text-yellow-600">About</a></li>
+        <li><a href="#" class="hover:text-yellow-600">Contact</a></li>
+        <li><a href="#" class="hover:text-yellow-600">🛒 Cart</a></li>
       </ul>
+      <a href="#"
+     class=" mr-20 text-amber-50 bg-amber-600 font-sans font-bold px-5 py-2 rounded-lg 
+            hover:bg-[#FF8C00] hover:text-white 
+            shadow-[0_0_10px_#FF8C00] hover:shadow-[0_0_20px_#FF8C00] 
+            transition-all duration-300">Log In</a>
     </div>
   </nav>
 
   <!-- HERO -->
-  <header class="text-center text-white py-20 bg-cover bg-center" style="background-image: url('https://picsum.photos/1200/400?tailwind');">
-    <h1 class="text-5xl font-bold">Welcome to E-Shop</h1>
-    <p class="mt-4 text-lg">Discover premium products for your business and lifestyle</p>
+  <header class="text-center text-white py-20 bg-cover bg-center" style="background-image: url('images/background.png');">
+    <h1 class="text-6xl font-GreatVibes text-amber-50 ">Welcome to <span class="text-amber-300">Promise</span></h1>
+    <p class="mt-4 text-2xl from-neutral-950">We design and curate stunning wedding dresses for brides and grooms,
+        blending elegance, comfort, and romance because every couple deserves
+        to shine on their wedding day</p>
   </header>
 
   <!-- PRODUCTS -->
-  <section class="py-12 flex-grow">
+  <section class="py-12 flex-grow mx-30">
     <div class="container mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-8">Featured Products</h2>
+      <h2 class="text-3xl font-bold my-0.5 text-center mb-8 text-amber-600 font-Tinos">Featured Products</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="border rounded-lg shadow-lg overflow-hidden">
-          <img src="https://picsum.photos/300/200?tail1" alt="Product 1" class="w-full">
-          <div class="p-4">
-            <h3 class="font-semibold">Elegant Chair</h3>
-            <p class="text-gray-600">$99.00</p>
-            <button class="mt-2 bg-blue-600 text-white px-4 py-2 w-full rounded">Add to Cart</button>
+        <div class="overflow-hidden  bg-black text-white 
+              border-1  border-[#e18624] rounded-xl 
+              p-1 shadow-[0_0_20px_#FFD600]">
+          <img src="images/wedding dress.jpg" alt="Product 1" class="w-full">
+          <div class="p-4 ">
+            <h3 class="font-semibold text-amber-600">Elegant Wedding Dress</h3>
+            <p class="text-white">Classic A-line silhouette with delicate lace and a flowing train.</p>
+            <button class="mt-2 w-full  bg-amber-500 text-white px-6 py-3 rounded-lg font-semibold
+transition duration-300 ease-in-out
+hover:text-black  border-[#e18624] hover:shadow-[0_0_25px_#FFD600]">Add to Cart</button>
           </div>
         </div>
-        <div class="border rounded-lg shadow-lg overflow-hidden">
-          <img src="https://picsum.photos/300/200?tail2" alt="Product 2" class="w-full">
+        <div class="overflow-hidden  bg-black text-white 
+              border-1 border-[#ff8400] rounded-xl 
+              p-1 shadow-[0_0_20px_#FFD600]">
+          <img src="images/Groom Wear For Indian Wedding Indian Wedding Sherwani For Groom.jpg" alt="Product 1" class="w-full">
           <div class="p-4">
-            <h3 class="font-semibold">Smart Lamp</h3>
-            <p class="text-gray-600">$49.00</p>
-            <button class="mt-2 bg-blue-600 text-white px-4 py-2 w-full rounded">Add to Cart</button>
+            <h3 class="font-semibold text-amber-600">Indian Goom Wea</h3>
+            <p class="text-white">Tradition-forward sherwanis with intricate embroidery and rich fabrics.</p>
+            <button class="mt-2 w-full  bg-amber-500 text-white px-6 py-3 rounded-lg font-semibold
+transition duration-300 ease-in-out
+hover:text-black  border-[#e18624] hover:shadow-[0_0_25px_#FFD600]">Add to Cart</button>
           </div>
         </div>
-        <div class="border rounded-lg shadow-lg overflow-hidden">
-          <img src="https://picsum.photos/300/200?tail3" alt="Product 3" class="w-full">
+        <div class="overflow-hidden  bg-black text-white 
+              border-1  border-[#e18624] rounded-xl 
+              p-1 shadow-[0_0_20px_#FFD600]">
+          <img src="images/Cathedral style wedding dresses.jpg" alt="Product 1" class="w-full">
           <div class="p-4">
-            <h3 class="font-semibold">Modern Desk</h3>
-            <p class="text-gray-600">$199.00</p>
-            <button class="mt-2 bg-blue-600 text-white px-4 py-2 w-full rounded">Add to Cart</button>
+            <h3 class="font-semibold text-amber-600">Cathedral Style Wedding Dresses</h3>
+            <p class="text-white">Regal trains and timeless silhouettes designed for grand venues.</p>
+            <button class="mt-2 w-full  bg-amber-500 text-white px-6 py-3 rounded-lg font-semibold
+transition duration-300 ease-in-out
+hover:text-black  border-[#e18624] hover:shadow-[0_0_25px_#FFD600]">Add to Cart</button>
+          </div>
+        </div>
+        <div class="overflow-hidden  bg-black text-white 
+              border-1  border-[#e18624] rounded-xl 
+              p-1 shadow-[0_0_20px_#FFD600]">
+          <img src="images/Pretty ball gown wedding dresses.jpg" alt="Product 1" class="w-full">
+          <div class="p-4">
+            <h3 class="font-semibold text-amber-600">Ball Gown Wedding Dresses</h3>
+            <p class="text-white">Full-skirted elegance with sparkling beadwork and structured bodice.</p>
+            <button class="mt-2 w-full  bg-amber-500 text-white px-6 py-3 rounded-lg font-semibold
+transition duration-300 ease-in-out
+hover:text-black  border-[#e18624] hover:shadow-[0_0_25px_#FFD600]">Add to Cart</button>
+          </div>
+        </div>
+        <div class="overflow-hidden  bg-black text-white 
+              border-1  border-[#e18624] rounded-xl 
+              p-1 shadow-[0_0_20px_#FFD600]">
+          <img src="images/casual fall wedding attire.png" alt="Product 2" class="w-full">
+          <div class="p-4">
+            <h3 class="font-semibold text-amber-600">Casual Attire</h3>
+            <p class="text-white">Comfortable, warm fabrics with elegant detailing for autumn ceremonies.</p>
+            <button class="mt-2 w-full  bg-amber-500 text-white px-6 py-3 rounded-lg font-semibold
+transition duration-300 ease-in-out
+hover:text-black  border-[#e18624] hover:shadow-[0_0_25px_#FFD600]">Add to Cart</button>
+          </div>
+        </div>
+        <div class="overflow-hidden  bg-black text-white 
+              border-1  border-[#e18624] rounded-xl 
+              p-1 shadow-[0_0_20px_#FFD600]">
+          <img src="images/Color Coordinated Outfit Ideas For The Millennial Bride And Groom.jpg" alt="Product 3" class="w-full">
+          <div class="p-4">
+            <h3 class="font-semibold text-amber-600">Bride & Groom Wedding Dress </h3>
+            <p class="text-white">Coordinated styles for a harmonious, picture-perfect couple look.</p>
+            <button class="mt-2 w-full  bg-amber-500 text-white px-6 py-3 rounded-lg font-semibold
+transition duration-300 ease-in-out
+hover:text-black  border-[#e18624] hover:shadow-[0_0_25px_#FFD600]">Add to Cart</button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Shopping -->
+  <div class="bg-amber-600 text-amber-950 font-bold w-2sl/3 mx-auto rounded-3xl p-3 mb-12 shadow-[0_0_25px_#FFD600] transition delay-[50ms] duration-300 ease-in-out hover:scale-105">
+    <div class=" text-center">
+      <a href="#" class="btn btn-go-shopping">Go Shopping</a>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-white text-center p-4 mt-auto">
-    <p>© 2025 E-Shop | Designed for demo purposes</p>
+    © 2025 <span class="text-amber-500 font-GreatVibes text-3xl">Pro</span><span class="font-GreatVibes text-3xl">mise </span> | Designed for loving couple
   </footer>
 
 </body>
