@@ -16,24 +16,27 @@
     <div class="container mx-auto flex justify-between items-center p-4">
       <a href="#" class="text-5xl text-amber-300 hover:text-amber-500 font-GreatVibes "> Pro<span
           class="hover:text-amber-300 text-amber-50 font-GreatVibes">mise</span></a>
-      <ul class="flex space-x-20 text-2xl text-amber-50">
-        <li><a href="/home.html" class="hover:text-yellow-600">Home</a></li>
-        <li><a href="/products.html" class="hover:text-yellow-600">Products</a></li>
-        <li><a href="/about.html" class="hover:text-yellow-600">About</a></li>
-        <li><a href="/cart.html" class="hover:text-yellow-600">🛒 Cart</a></li>
+      <ul class="flex space-x-10 text-2xl text-amber-50">
+        <li><a href="/home.html" class="align-middle hover:text-yellow-600">Home</a></li>
+        <li><a href="/products.html" class="align-middle hover:text-yellow-600">Products</a></li>
+        <li><a href="/about.html" class="align-middle hover:text-yellow-600">About</a></li>
+        <li><a href="/cart.html" class="align-middle hover:text-yellow-600">🛒 Cart</a></li>
+        <li href="#"
+          class="cursor-pointer align-middle text-amber-50 bg-amber-600 font-sans px-4 py-1 rounded-lg hover:bg-[#FF8C00] hover:text-white shadow-[0_0_10px_#FF8C00] hover:shadow-[0_0_20px_#FF8C00] transition-all duration-300">
+          Log
+          In</li>
       </ul>
-      <a href="#"
-        class="text-amber-50 bg-amber-600 font-sans font-bold px-5 py-2 rounded-lg hover:bg-[#FF8C00] hover:text-white shadow-[0_0_10px_#FF8C00] hover:shadow-[0_0_20px_#FF8C00] transition-all duration-300">Log
-        In</a>
     </div>
   </nav>
 
   <!-- HERO -->
-  <header class="text-center text-white py-20 px-52 bg-cover bg-center"
-    style="background-image: url('images/background.png');">
-    <h1 class="text-6xl font-GreatVibes text-amber-50 ">Our <span class="text-amber-300">Products</span></h1>
-    <p class="p-4 text-2xl">Browse our curated collection of wedding attire — crafted for elegance, comfort and timeless
-      memories.</p>
+  <header class="text-center text-white py-20 px-6 bg-cover bg-center bg-[url(/images/background.png)]">
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-6xl font-GreatVibes text-amber-50">Our <span class="text-amber-300">Products</span></h1>
+      <p class="mt-4 text-2xl text-amber-50">Browse our curated collection of wedding attire — crafted for elegance,
+        comfort and timeless
+        memories.</p>
+    </div>
   </header>
 
   <!-- PAGE CONTENT -->
@@ -41,33 +44,38 @@
     <div class="flex flex-col lg:flex-row gap-8">
 
       <!-- SIDEBAR FILTERS -->
-      <aside class="w-full lg:w-72 bg-gray-800 rounded-lg p-6 shadow-lg">
+      <aside
+        class="w-full lg:w-72 bg-gradient-to-b from-[#d7c0a2] to-[#111111] rounded-lg p-6 border border-amber-800 shadow-lg lg:sticky lg:top-24 self-start">
         <h3 class="text-amber-300 font-semibold mb-4">FILTERS</h3>
 
         <div class="space-y-4">
-          <label class="block text-sm text-white/80">Search</label>
-          <input placeholder="Search products..." class="w-full rounded-md px-3 py-2 text-amber-50" />
+          <label class="block text-sm text-amber-100">Search</label>
+          <input placeholder="Search products..."
+            class="w-full rounded-md px-3 py-2 bg-gray-900 border border-gray-700 text-amber-100" />
 
           <div>
             <h4 class="text-amber-300 font-medium mt-2 mb-2">Category</h4>
-            <ul class="space-y-2 text-sm text-white/80">
-              <li class="flex items-center gap-3"><input type="checkbox" class="w-4 h-4" /> Women</li>
-              <li class="flex items-center gap-3"><input type="checkbox" class="w-4 h-4" /> Men</li>
-              <li class="flex items-center gap-3"><input type="checkbox" class="w-4 h-4" /> Kids</li>
-              <li class="flex items-center gap-3"><input type="checkbox" class="w-4 h-4" /> Accessories
-              </li>
+            <ul class="space-y-2 text-sm text-amber-100">
+              <li class="flex items-center gap-3"><input type="checkbox" class="w-4 h-4 text-amber-400" /> <span
+                  class="ml-1">Women</span></li>
+              <li class="flex items-center gap-3"><input type="checkbox" class="w-4 h-4 text-amber-400" /> <span
+                  class="ml-1">Men</span></li>
+              <li class="flex items-center gap-3"><input type="checkbox" class="w-4 h-4 text-amber-400" /> <span
+                  class="ml-1">Kids</span></li>
+              <li class="flex items-center gap-3"><input type="checkbox" class="w-4 h-4 text-amber-400" /> <span
+                  class="ml-1">Accessories</span></li>
             </ul>
           </div>
 
           <div>
             <h4 class="text-amber-300 font-medium mt-2 mb-2">Price</h4>
             <input type="range" min="0" max="1000" class="w-full" />
-            <div class="text-sm text-white/80 mt-1">Up to: $1000</div>
+            <div class="text-sm text-amber-100 mt-1">Up to: $1000</div>
           </div>
 
           <div>
             <h4 class="text-amber-300 font-medium mt-2 mb-2">Rating</h4>
-            <select class="w-full rounded-md text-amber-50 px-2 py-2">
+            <select class="w-full rounded-md bg-gray-900 border border-gray-700 text-amber-100 px-2 py-2">
               <option>Any</option>
               <option>4 ★ & up</option>
               <option>3 ★ & up</option>
@@ -75,7 +83,7 @@
           </div>
 
           <button
-            class="mt-4 w-full bg-black text-amber-300 border border-amber-500 rounded-md px-4 py-2 hover:bg-amber-500 hover:text-amber-50 transition">Clear
+            class="mt-4 w-full bg-transparent text-amber-300 border border-amber-500 rounded-md px-4 py-2 hover:bg-amber-500 hover:text-amber-50 transition">Clear
             filters</button>
         </div>
       </aside>
@@ -89,8 +97,8 @@
           </div>
           <div class="flex items-center gap-4">
             <label class="text-sm text-white/80">SORT</label>
-            <select class="rounded-md text-amber-50 px-2 py-1">
-              <option>Newest</option>npm run w
+            <select class="rounded-md text-amber-50 px-2 py-1 bg-gray-900 border border-gray-700">
+              <option>Newest</option>
               <option>Price: Low to High</option>
               <option>Price: High to Low</option>
             </select>
@@ -110,12 +118,12 @@
             </div>
             <div class="p-4">
               <h3 class="text-amber-300 font-semibold">Elegant Wedding Dress</h3>
-              <p class="text-white/80 mt-1">Classic A-line silhouette with delicate lace and a flowing
+              <p class="text-amber-100 mt-1">Classic A-line silhouette with delicate lace and a flowing
                 train.</p>
               <div class="mt-4 flex items-center justify-between">
                 <div class="text-amber-300 font-bold">$200.00</div>
                 <button
-                  class="bg-amber-500 text-black px-4 py-2 rounded-md hover:shadow-[0_0_25px_#FFD600] transition">Add
+                  class="cursor-pointer bg-amber-500 text-black px-4 py-2 rounded-md hover:shadow-[0_0_25px_#FFD600] transition">Add
                   to Cart</button>
               </div>
             </div>
@@ -131,12 +139,12 @@
             </div>
             <div class="p-4">
               <h3 class="text-amber-300 font-semibold">Casual Fall Attire</h3>
-              <p class="text-white/80 mt-1">Comfortable, warm fabrics with elegant detailing for autumn
+              <p class="text-amber-100 mt-1">Comfortable, warm fabrics with elegant detailing for autumn
                 ceremonies.</p>
               <div class="mt-4 flex items-center justify-between">
                 <div class="text-amber-300 font-bold">$100.00</div>
                 <button
-                  class="bg-amber-500 text-black px-4 py-2 rounded-md hover:shadow-[0_0_25px_#FFD600] transition">Add
+                  class="cursor-pointer bg-amber-500 text-black px-4 py-2 rounded-md hover:shadow-[0_0_25px_#FFD600] transition">Add
                   to Cart</button>
               </div>
             </div>
@@ -152,12 +160,12 @@
             </div>
             <div class="p-4">
               <h3 class="text-amber-300 font-semibold">Bride & Groom Matching</h3>
-              <p class="text-white/80 mt-1">Coordinated styles for a harmonious, picture-perfect couple
+              <p class="text-amber-100 mt-1">Coordinated styles for a harmonious, picture-perfect couple
                 look.</p>
               <div class="mt-4 flex items-center justify-between">
                 <div class="text-amber-300 font-bold">$400.00</div>
                 <button
-                  class="bg-amber-500 text-black px-4 py-2 rounded-md hover:shadow-[0_0_25px_#FFD600] transition">Add
+                  class="cursor-pointer bg-amber-500 text-black px-4 py-2 rounded-md hover:shadow-[0_0_25px_#FFD600] transition">Add
                   to Cart</button>
               </div>
             </div>
@@ -176,7 +184,7 @@
               <div class="mt-4 flex items-center justify-between">
                 <div class="text-amber-300 font-bold">$350.00</div>
                 <button
-                  class="bg-amber-500 text-black px-4 py-2 rounded-md hover:shadow-[0_0_25px_#FFD600] transition">Add
+                  class="cursor-pointer bg-amber-500 text-black px-4 py-2 rounded-md hover:shadow-[0_0_25px_#FFD600] transition">Add
                   to Cart</button>
               </div>
             </div>
@@ -195,7 +203,7 @@
               <div class="mt-4 flex items-center justify-between">
                 <div class="text-amber-300 font-bold">$100.00</div>
                 <button
-                  class="bg-amber-500 text-black px-4 py-2 rounded-md hover:shadow-[0_0_25px_#FFD600] transition">Add
+                  class="cursor-pointer bg-amber-500 text-black px-4 py-2 rounded-md hover:shadow-[0_0_25px_#FFD600] transition">Add
                   to Cart</button>
               </div>
             </div>
@@ -215,7 +223,7 @@
               <div class="mt-4 flex items-center justify-between">
                 <div class="text-amber-300 font-bold">$450.00</div>
                 <button
-                  class="bg-amber-500 text-black px-4 py-2 rounded-md hover:shadow-[0_0_25px_#FFD600] transition">Add
+                  class="cursor-pointer bg-amber-500 text-black px-4 py-2 rounded-md hover:shadow-[0_0_25px_#FFD600] transition">Add
                   to Cart</button>
               </div>
             </div>
@@ -227,10 +235,14 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-white text-center p-3 mt-3">
-    © 2025 <span class="text-amber-500 font-GreatVibes text-3xl">Pro</span><span class="font-GreatVibes text-3xl">mise
-    </span> | Designed for loving couple
+  <footer class="bg-gray-900 text-white text-center">
+    <div class="mt-3 align-middle">
+      © 2025 <span class="align-middle text-amber-500 font-GreatVibes text-2xl">Pro</span><span
+        class="font-GreatVibes text-2xl">mise
+      </span> | Designed for loving couple
+    </div>
   </footer>
+
 </body>
 
 </html>
