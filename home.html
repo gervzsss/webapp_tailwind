@@ -1,26 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home - Promise</title>
 
-  <link rel="stylesheet" href="dist/styles.css">
+  <link rel="stylesheet" href="dist/styles.css" />
 </head>
 
-<body class="bg-black flex flex-col min-h-screen">
-
+<body class="flex min-h-screen flex-col bg-black">
   <!-- NAVBAR -->
   <nav class="bg-black">
-    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center p-4 gap-4 md:gap-0">
-      <div class="w-full flex items-center justify-between md:w-auto">
+    <div class="container mx-auto flex flex-col items-center justify-between gap-4 p-4 md:flex-row md:gap-0">
+      <div class="flex w-full items-center justify-between md:w-auto">
         <a href="/home.html"
-          class="text-3xl md:text lg:text-5xl text-amber-300 hover:text-amber-500 font-GreatVibes lg:pl-15"> Pro<span
-            class="hover:text-amber-300 text-amber-50 font-GreatVibes">mise</span></a>
+          class="md:text font-GreatVibes animate-glow text-3xl text-amber-300 hover:text-amber-500 lg:pl-15 lg:text-5xl">
+          Pro<span class="font-GreatVibes text-amber-50 hover:text-amber-300">mise</span></a>
         <!-- Mobile menu button -->
         <button id="nav-toggle" aria-controls="nav-menu" aria-expanded="false"
-          class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-amber-50 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-amber-500">
+          class="inline-flex items-center justify-center rounded-md p-2 text-amber-50 hover:bg-white/5 focus:ring-2 focus:ring-amber-500 focus:outline-none md:hidden">
           <span class="sr-only">Open main menu</span>
           <!-- simple hamburger icon -->
           <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -30,14 +29,22 @@
         </button>
       </div>
       <ul id="nav-menu"
-        class="hidden md:flex flex-col md:flex-row items-center md:space-x-10 space-y-2 md:space-y-0 text-lg sm:text-xl text-amber-50">
-        <li><a href="/home.html" class="align-middle hover:text-yellow-600 px-2 md:px-0">Home</a></li>
-        <li><a href="/products.html" class="align-middle hover:text-yellow-600 px-2 md:px-0">Products</a></li>
-        <li><a href="/about.html" class="align-middle hover:text-yellow-600 px-2 md:px-0">About</a></li>
-        <li><a href="/cart.html" class="align-middle hover:text-yellow-600 px-2 md:px-0">🛒 Cart</a></li>
+        class="hidden flex-col items-center space-y-2 text-lg text-amber-50 sm:text-xl md:flex md:flex-row md:space-y-0 md:space-x-10">
+        <li>
+          <a href="/home.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">Home</a>
+        </li>
+        <li>
+          <a href="/products.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">Products</a>
+        </li>
+        <li>
+          <a href="/about.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">About</a>
+        </li>
+        <li>
+          <a href="/cart.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">🛒 Cart</a>
+        </li>
         <li>
           <a href="#"
-            class="inline-block cursor-pointer align-middle text-amber-50 bg-amber-600 font-sans px-4 py-1 rounded-lg hover:bg-[#FF8C00] hover:text-white shadow-[0_0_10px_#FF8C00] hover:shadow-[0_0_20px_#FF8C00] transition-all duration-300 text-sm sm:text-base">Log
+            class="inline-block cursor-pointer rounded-lg bg-amber-600 px-4 py-1 align-middle font-sans text-sm text-amber-50 shadow-[0_0_10px_#FF8C00] transition-all duration-300 hover:bg-[#FF8C00] hover:text-white hover:shadow-[0_0_20px_#FF8C00] sm:text-base">Log
             In</a>
         </li>
       </ul>
@@ -46,92 +53,119 @@
 
   <!-- HERO -->
   <header
-    class="text-center text-white py-12 sm:py-16 md:py-20 px-6 bg-cover bg-center bg-[url(/images/background.png)]">
-    <div class="max-w-3xl sm:max-w-4xl md:max-w-5xl mx-auto px-4">
-      <h1 class="text-3xl sm:text-4xl md:text-6xl font-GreatVibes text-amber-50">Welcome to <span
-          class="text-amber-300">Promise</span></h1>
-      <p class="mt-4 text-base sm:text-lg md:text-2xl text-amber-50">We design and curate stunning wedding dresses for
-        brides and grooms, blending elegance, comfort, and romance because every couple deserves to shine on their
-        wedding day</p>
+    class="bg-[url(/images/background.png)] bg-cover bg-center px-6 py-12 text-center text-white sm:py-16 md:py-20">
+    <div class="mx-auto max-w-3xl px-4 sm:max-w-4xl md:max-w-5xl">
+      <h1 class="font-GreatVibes animate-glow text-3xl text-amber-50 sm:text-4xl md:text-6xl">
+        Welcome to <span class="text-amber-300">Promise</span>
+      </h1>
+      <p class="mt-4 text-base text-amber-50 sm:text-lg md:text-2xl">
+        We design and curate stunning wedding dresses for brides and grooms,
+        blending elegance, comfort, and romance because every couple deserves
+        to shine on their wedding day
+      </p>
     </div>
   </header>
 
   <!-- PRODUCTS -->
-  <section class="py-6 flex-grow">
-    <div class="mx-auto px-4 max-w-screen-xl">
-      <h2 class="text-2xl sm:text-3xl font-bold my-0.5 text-center mb-6 text-amber-600 font-Tinos">Featured Products
+  <section class="flex-grow py-6">
+    <div class="mx-auto max-w-screen-xl px-4">
+      <h2 class="font-Tinos animate-glow my-0.5 mb-6 text-center text-2xl font-bold text-amber-600 sm:text-3xl">
+        Featured Products
       </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-8">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
         <div
-          class="flex flex-col overflow-hidden bg-black text-white rounded-xl border border-amber-700 shadow-[0_6px_30px_rgba(255,214,0,0.25)] w-full">
+          class="flex w-full flex-col overflow-hidden rounded-xl border border-amber-700 bg-black text-white shadow-[0_6px_30px_rgba(255,214,0,0.25)]">
           <div class="w-full overflow-hidden rounded-t-xl">
-            <img src="images/wedding dress.jpg" alt="Product 1" class="w-full">
+            <img src="images/wedding dress.jpg" alt="Product 1" class="w-full" />
           </div>
-          <div class="p-4 bg-gradient-to-b from-black/60 to-black text-left flex-1 flex flex-col justify-center">
-            <h3 class="font-semibold text-amber-400 text-lg sm:text-xl">Elegant Wedding Dress</h3>
-            <p class="text-amber-100 text-sm sm:text-base mt-2">Classic A-line silhouette with delicate lace and a
-              flowing train.</p>
+          <div class="flex flex-1 flex-col justify-center bg-gradient-to-b from-black/60 to-black p-4 text-left">
+            <h3 class="text-lg font-semibold text-amber-400 sm:text-xl">
+              Elegant Wedding Dress
+            </h3>
+            <p class="mt-2 text-sm text-amber-100 sm:text-base">
+              Classic A-line silhouette with delicate lace and a flowing
+              train.
+            </p>
           </div>
         </div>
 
         <div
-          class="flex flex-col overflow-hidden bg-black text-white rounded-xl border border-amber-700 shadow-[0_6px_30px_rgba(255,214,0,0.25)] w-full">
+          class="flex w-full flex-col overflow-hidden rounded-xl border border-amber-700 bg-black text-white shadow-[0_6px_30px_rgba(255,214,0,0.25)]">
           <div class="w-full overflow-hidden rounded-t-xl">
-            <img src="images/casual fall wedding attire.png" alt="Product 2" class="w-full">
+            <img src="images/casual fall wedding attire.png" alt="Product 2" class="w-full" />
           </div>
-          <div class="p-4 bg-gradient-to-b from-black/60 to-black text-left flex-1 flex flex-col justify-center">
-            <h3 class="font-semibold text-amber-400 text-lg sm:text-xl">Casual fall Wedding Attire</h3>
-            <p class="text-amber-100 text-sm sm:text-base mt-2">Comfortable, warm fabrics with elegant detailing for
-              autumn ceremonies.</p>
+          <div class="flex flex-1 flex-col justify-center bg-gradient-to-b from-black/60 to-black p-4 text-left">
+            <h3 class="text-lg font-semibold text-amber-400 sm:text-xl">
+              Casual fall Wedding Attire
+            </h3>
+            <p class="mt-2 text-sm text-amber-100 sm:text-base">
+              Comfortable, warm fabrics with elegant detailing for autumn
+              ceremonies.
+            </p>
           </div>
         </div>
 
         <div
-          class="flex flex-col overflow-hidden bg-black text-white rounded-xl border border-amber-700 shadow-[0_6px_30px_rgba(255,214,0,0.25)] w-full">
+          class="flex w-full flex-col overflow-hidden rounded-xl border border-amber-700 bg-black text-white shadow-[0_6px_30px_rgba(255,214,0,0.25)]">
           <div class="w-full overflow-hidden rounded-t-xl">
-            <img src="images/Cathedral style wedding dresses.jpg" alt="Product 1" class="w-full">
+            <img src="images/Cathedral style wedding dresses.jpg" alt="Product 1" class="w-full" />
           </div>
-          <div class="p-4 bg-gradient-to-b from-black/60 to-black text-left flex-1 flex flex-col justify-center">
-            <h3 class="font-semibold text-amber-400 text-lg sm:text-xl">Cathedral Style Wedding Dresses</h3>
-            <p class="text-amber-100 text-sm sm:text-base mt-2">Regal trains and timeless silhouettes designed for grand
-              venues.</p>
+          <div class="flex flex-1 flex-col justify-center bg-gradient-to-b from-black/60 to-black p-4 text-left">
+            <h3 class="text-lg font-semibold text-amber-400 sm:text-xl">
+              Cathedral Style Wedding Dresses
+            </h3>
+            <p class="mt-2 text-sm text-amber-100 sm:text-base">
+              Regal trains and timeless silhouettes designed for grand venues.
+            </p>
           </div>
         </div>
 
         <div
-          class="flex flex-col overflow-hidden bg-black text-white rounded-xl border border-amber-700 shadow-[0_6px_30px_rgba(255,214,0,0.25)] w-full">
+          class="flex w-full flex-col overflow-hidden rounded-xl border border-amber-700 bg-black text-white shadow-[0_6px_30px_rgba(255,214,0,0.25)]">
           <div class="w-full overflow-hidden rounded-t-xl">
             <img src="images/Groom Wear For Indian Wedding Indian Wedding Sherwani For Groom.jpg" alt="Product 1"
-              class="w-full">
+              class="w-full" />
           </div>
-          <div class="p-4 bg-gradient-to-b from-black/60 to-black text-left flex-1 flex flex-col justify-center">
-            <h3 class="font-semibold text-amber-400 text-lg sm:text-xl">Indian Groom Wear</h3>
-            <p class="text-amber-100 text-sm sm:text-base mt-2">Tradition-forward sherwanis with intricate embroidery
-              and rich fabrics.</p>
-          </div>
-        </div>
-
-        <div
-          class="flex flex-col overflow-hidden bg-black text-white rounded-xl border border-amber-700 shadow-[0_6px_30px_rgba(255,214,0,0.25)] w-full">
-          <div class="w-full overflow-hidden rounded-t-xl">
-            <img src="images/Pretty ball gown wedding dresses.jpg" alt="Product 1" class="w-full">
-          </div>
-          <div class="p-4 bg-gradient-to-b from-black/60 to-black text-left flex-1 flex flex-col justify-center">
-            <h3 class="font-semibold text-amber-400 text-lg sm:text-xl">Ball Gown Wedding Dresses</h3>
-            <p class="text-amber-100 text-sm sm:text-base mt-2">Full-skirted elegance with sparkling beadwork and
-              structured bodice.</p>
+          <div class="flex flex-1 flex-col justify-center bg-gradient-to-b from-black/60 to-black p-4 text-left">
+            <h3 class="text-lg font-semibold text-amber-400 sm:text-xl">
+              Indian Groom Wear
+            </h3>
+            <p class="mt-2 text-sm text-amber-100 sm:text-base">
+              Tradition-forward sherwanis with intricate embroidery and rich
+              fabrics.
+            </p>
           </div>
         </div>
 
         <div
-          class="flex flex-col overflow-hidden bg-black text-white rounded-xl border border-amber-700 shadow-[0_6px_30px_rgba(255,214,0,0.25)] w-full">
+          class="flex w-full flex-col overflow-hidden rounded-xl border border-amber-700 bg-black text-white shadow-[0_6px_30px_rgba(255,214,0,0.25)]">
           <div class="w-full overflow-hidden rounded-t-xl">
-            <img src="images/Bride And Groom Matching Dress For Wedding.jpg" alt="Product 3" class="w-full">
+            <img src="images/Pretty ball gown wedding dresses.jpg" alt="Product 1" class="w-full" />
           </div>
-          <div class="p-4 bg-gradient-to-b from-black/60 to-black text-left flex-1 flex flex-col justify-center">
-            <h3 class="font-semibold text-amber-400 text-lg sm:text-xl">Bride & Groom Dress For Wedding</h3>
-            <p class="text-amber-100 text-sm sm:text-base mt-2">Coordinated styles for a harmonious, picture-perfect
-              couple look.</p>
+          <div class="flex flex-1 flex-col justify-center bg-gradient-to-b from-black/60 to-black p-4 text-left">
+            <h3 class="text-lg font-semibold text-amber-400 sm:text-xl">
+              Ball Gown Wedding Dresses
+            </h3>
+            <p class="mt-2 text-sm text-amber-100 sm:text-base">
+              Full-skirted elegance with sparkling beadwork and structured
+              bodice.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex w-full flex-col overflow-hidden rounded-xl border border-amber-700 bg-black text-white shadow-[0_6px_30px_rgba(255,214,0,0.25)]">
+          <div class="w-full overflow-hidden rounded-t-xl">
+            <img src="images/Bride And Groom Matching Dress For Wedding.jpg" alt="Product 3" class="w-full" />
+          </div>
+          <div class="flex flex-1 flex-col justify-center bg-gradient-to-b from-black/60 to-black p-4 text-left">
+            <h3 class="text-lg font-semibold text-amber-400 sm:text-xl">
+              Bride & Groom Dress For Wedding
+            </h3>
+            <p class="mt-2 text-sm text-amber-100 sm:text-base">
+              Coordinated styles for a harmonious, picture-perfect couple
+              look.
+            </p>
           </div>
         </div>
       </div>
@@ -139,23 +173,24 @@
   </section>
 
   <!-- Shopping -->
-  <div class="flex m-6 sm:m-8 justify-center">
+  <div class="m-6 flex justify-center sm:m-8">
     <a href="/products.html"
-      class="inline-block bg-amber-500 text-black px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-sm sm:text-base hover:shadow-[0_0_40px_rgba(255,160,0,0.55)] transition">Go
+      class="inline-block rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-black transition hover:shadow-[0_0_40px_rgba(255,160,0,0.55)] sm:px-8 sm:py-4 sm:text-base">Go
       Shopping</a>
   </div>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-white text-center py-4">
-    <div class="mt-3 align-middle text-sm sm:text-base">
-      © 2025 <span class="align-middle text-amber-500 font-GreatVibes text-xl sm:text-2xl">Pro</span><span
-        class="font-GreatVibes text-xl sm:text-2xl">mise</span> | Designed for loving couple
+  <footer class="bg-gray-900 py-4 text-center text-white">
+    <div class="animate-glow-slow mt-3 align-middle text-sm sm:text-base">
+      © 2025
+      <span class="font-GreatVibes align-middle text-xl text-amber-500 sm:text-2xl">Pro</span><span
+        class="font-GreatVibes text-xl sm:text-2xl">mise</span> |
+      Designed for loving couple
     </div>
   </footer>
 
   <script src="/js/jquery-3.7.1.min.js"></script>
   <script src="/js/main.js"></script>
-
 </body>
 
 </html>

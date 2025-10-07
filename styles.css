@@ -7,28 +7,17 @@
   --font-Quintessential: "Quintessential", sans-serif;
   --font-Tinos: "Tinos", sans-serif;
   --font-RobotoCondensed: "Roboto Condensed", sans-serif;
-}
 
-@keyframes animate {
-  from {
-    text-shadow: 0 0 5px #f6f4f3, 0 0 10px #ffc107;
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px #f6f4f3, 0 0 10px #ffc107;
+    }
+
+    to {
+      text-shadow: 0 0 20px #f6f4f3, 0 0 40px #ffc107;
+    }
   }
 
-  to {
-    text-shadow: 0 0 20px #f6f4f3, 0 0 40px #ffc107;
-  }
-}
-
-nav .text-4xl {
-  animation: animate 1s infinite alternate;
-}
-
-header h1 {
-
-  animation: animate 2s infinite alternate;
-}
-
-section h2 {
-
-  animation: animate 1s infinite alternate;
+  --animate-glow: glow 1s infinite alternate;
+  --animate-glow-slow: glow 2s infinite alternate;
 }
