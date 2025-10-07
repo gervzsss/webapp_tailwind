@@ -12,19 +12,21 @@
 <body class="bg-black flex flex-col min-h-screen">
 
   <!-- NAVBAR -->
-  <nav class="bg-black">
+  <nav class="px-10 bg-black">
     <div class="container mx-auto flex justify-between items-center p-4">
-      <a href="home.html" class="text-5xl text-amber-300 hover:text-amber-500 font-GreatVibes "> Pro<span
+     <a href="/home.html" class="pl-15 text-5xl text-amber-300 hover:text-amber-500 font-GreatVibes "> Pro<span
           class="hover:text-amber-300 text-amber-50 font-GreatVibes">mise</span></a>
-      <ul class="flex space-x-10 text-2xl text-amber-50">
-        <li><a href="/home.html" class="align-middle hover:text-yellow-600">Home</a></li>
-        <li><a href="/products.html" class="align-middle hover:text-yellow-600">Products</a></li>
-        <li><a href="/about.html" class="align-middle hover:text-yellow-600">About</a></li>
-        <li><a href="/cart.html" class="align-middle hover:text-yellow-600">🛒 Cart</a></li>
-        <li href="#"
-          class="cursor-pointer align-middle text-amber-50 bg-amber-600 font-sans px-4 py-1 rounded-lg hover:bg-[#FF8C00] hover:text-white shadow-[0_0_10px_#FF8C00] hover:shadow-[0_0_20px_#FF8C00] transition-all duration-300">
-          Log
-          In</li>
+      <ul id="nav-menu"
+        class="hidden md:flex flex-col md:flex-row items-center md:space-x-10 space-y-2 md:space-y-0 text-lg sm:text-xl text-amber-50">
+        <li><a href="/home.html" class="align-middle hover:text-yellow-600 px-2 md:px-0">Home</a></li>
+        <li><a href="/products.html" class="align-middle hover:text-yellow-600 px-2 md:px-0">Products</a></li>
+        <li><a href="/about.html" class="align-middle hover:text-yellow-600 px-2 md:px-0">About</a></li>
+        <li><a href="/cart.html" class="align-middle hover:text-yellow-600 px-2 md:px-0">🛒 Cart</a></li>
+        <li>
+          <a href="#"
+            class="inline-block cursor-pointer align-middle text-amber-50 bg-amber-600 font-sans px-4 py-1 rounded-lg hover:bg-[#FF8C00] hover:text-white shadow-[0_0_10px_#FF8C00] hover:shadow-[0_0_20px_#FF8C00] transition-all duration-300 text-sm sm:text-base">Log
+            In</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -40,7 +42,7 @@
   </header>
 
   <!-- PAGE CONTENT -->
-  <main class="container mx-auto flex-1 py-10">
+  <main class="px-15 container mx-auto flex-1 py-10">
     <div class="flex flex-col lg:flex-row gap-8">
 
       <!-- SIDEBAR FILTERS -->
@@ -107,7 +109,7 @@
 
         <h2 class="text-3xl font-bold my-0.5 text-center mb-8 text-amber-600 font-Tinos">All Products</h2>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
           <!-- Product Card -->
           <article
