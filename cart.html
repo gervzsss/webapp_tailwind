@@ -12,11 +12,24 @@
 <body class="bg-black flex flex-col min-h-screen">
 
   <!-- NAVBAR -->
-  <nav class="px-10 bg-black">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <a href="/home.html" class="pl-15 text-5xl text-amber-300 hover:text-amber-500 font-GreatVibes "> Pro<span
-          class="hover:text-amber-300 text-amber-50 font-GreatVibes">mise</span></a>
-        <ul id="nav-menu"
+  <nav class="bg-black">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center p-4 gap-4 md:gap-0">
+      <div class="w-full flex items-center justify-between md:w-auto">
+        <a href="/home.html"
+          class="text-3xl md:text lg:text-5xl text-amber-300 hover:text-amber-500 font-GreatVibes lg:pl-15"> Pro<span
+            class="hover:text-amber-300 text-amber-50 font-GreatVibes">mise</span></a>
+        <!-- Mobile menu button -->
+        <button id="nav-toggle" aria-controls="nav-menu" aria-expanded="false"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-amber-50 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-amber-500">
+          <span class="sr-only">Open main menu</span>
+          <!-- simple hamburger icon -->
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <ul id="nav-menu"
         class="hidden md:flex flex-col md:flex-row items-center md:space-x-10 space-y-2 md:space-y-0 text-lg sm:text-xl text-amber-50">
         <li><a href="/home.html" class="align-middle hover:text-yellow-600 px-2 md:px-0">Home</a></li>
         <li><a href="/products.html" class="align-middle hover:text-yellow-600 px-2 md:px-0">Products</a></li>
@@ -31,13 +44,15 @@
     </div>
   </nav>
 
-  <body class="bg-black text-white min-h-screen font-Tinos">
-    <header  class="text-center text-white py-12 sm:py-16 md:py-20 px-6 bg-cover bg-center bg-[url(/images/cart-background.jpg)]">
-    <div class="max-w-3xl sm:max-w-4xl md:max-w-5xl mx-auto px-4">
-      <h1 class="text-3xl sm:text-4xl md:text-6xl font-RobotoCondensed font-bold text-amber-50"><span class="font-Quintessential">Y</span>OUR <span
-          class="text-amber-300"><span class="font-Quintessential">C</span>ART</span></h1>
-      
-    </header >
+  <div class="bg-black text-white min-h-screen font-Tinos">
+    <header
+      class="text-center text-white py-12 sm:py-16 md:py-20 px-6 bg-cover bg-center bg-[url(/images/cart-background.jpg)]">
+      <div class="max-w-3xl sm:max-w-4xl md:max-w-5xl mx-auto px-4">
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-RobotoCondensed font-bold text-amber-50"><span
+            class="font-Quintessential">Y</span>OUR <span class="text-amber-300"><span
+              class="font-Quintessential">C</span>ART</span></h1>
+      </div>
+    </header>
 
     <main class="container mx-auto py-6">
       <div class="px-10 flex flex-col lg:flex-row gap-8">
@@ -264,8 +279,14 @@
           class="font-GreatVibes text-2xl">mise
         </span> | Designed for loving couple
       </div>
+
     </footer>
 
-  </body>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/main.js"></script>
+
+  </div>
+
+</body>
 
 </html>

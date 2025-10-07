@@ -12,11 +12,12 @@
 <body class="bg-black flex flex-col min-h-screen">
 
   <!-- NAVBAR -->
-  <nav class="px-10 bg-black">
+  <nav class="bg-black">
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center p-4 gap-4 md:gap-0">
       <div class="w-full flex items-center justify-between md:w-auto">
-        <a href="/home.html" class="pl-15 text-5xl text-amber-300 hover:text-amber-500 font-GreatVibes "> Pro<span
-          class="hover:text-amber-300 text-amber-50 font-GreatVibes">mise</span></a>
+        <a href="/home.html"
+          class="text-3xl md:text lg:text-5xl text-amber-300 hover:text-amber-500 font-GreatVibes lg:pl-15"> Pro<span
+            class="hover:text-amber-300 text-amber-50 font-GreatVibes">mise</span></a>
         <!-- Mobile menu button -->
         <button id="nav-toggle" aria-controls="nav-menu" aria-expanded="false"
           class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-amber-50 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-amber-500">
@@ -100,7 +101,8 @@
         <div
           class="flex flex-col overflow-hidden bg-black text-white rounded-xl border border-amber-700 shadow-[0_6px_30px_rgba(255,214,0,0.25)] w-full">
           <div class="w-full overflow-hidden rounded-t-xl">
-            <img src="images/Groom Wear For Indian Wedding Indian Wedding Sherwani For Groom.jpg" alt="Product 1" class="w-full">
+            <img src="images/Groom Wear For Indian Wedding Indian Wedding Sherwani For Groom.jpg" alt="Product 1"
+              class="w-full">
           </div>
           <div class="p-4 bg-gradient-to-b from-black/60 to-black text-left flex-1 flex flex-col justify-center">
             <h3 class="font-semibold text-amber-400 text-lg sm:text-xl">Indian Groom Wear</h3>
@@ -151,26 +153,8 @@
     </div>
   </footer>
 
-  <!-- Mobile nav toggle script -->
-  <script>
-    (function () {
-      const btn = document.getElementById('nav-toggle');
-      const menu = document.getElementById('nav-menu');
-      if (!btn || !menu) return;
-      btn.addEventListener('click', function () {
-        const isHidden = menu.classList.contains('hidden');
-        if (isHidden) {
-          menu.classList.remove('hidden');
-          menu.classList.add('flex');
-          btn.setAttribute('aria-expanded', 'true');
-        } else {
-          menu.classList.add('hidden');
-          menu.classList.remove('flex');
-          btn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    })();
-  </script>
+  <script src="/js/jquery-3.7.1.min.js"></script>
+  <script src="/js/main.js"></script>
 
 </body>
 

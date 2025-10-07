@@ -12,11 +12,24 @@
 <body class="bg-black flex flex-col min-h-screen">
 
   <!-- NAVBAR -->
-  <nav class="px-10 bg-black">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <a href="/home.html" class="pl-15 text-5xl text-amber-300 hover:text-amber-500 font-GreatVibes "> Pro<span
-          class="hover:text-amber-300 text-amber-50 font-GreatVibes">mise</span></a>
-        <ul id="nav-menu"
+  <nav class="bg-black">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center p-4 gap-4 md:gap-0">
+      <div class="w-full flex items-center justify-between md:w-auto">
+        <a href="/home.html"
+          class="text-3xl md:text lg:text-5xl text-amber-300 hover:text-amber-500 font-GreatVibes lg:pl-15"> Pro<span
+            class="hover:text-amber-300 text-amber-50 font-GreatVibes">mise</span></a>
+        <!-- Mobile menu button -->
+        <button id="nav-toggle" aria-controls="nav-menu" aria-expanded="false"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-amber-50 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-amber-500">
+          <span class="sr-only">Open main menu</span>
+          <!-- simple hamburger icon -->
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <ul id="nav-menu"
         class="hidden md:flex flex-col md:flex-row items-center md:space-x-10 space-y-2 md:space-y-0 text-lg sm:text-xl text-amber-50">
         <li><a href="/home.html" class="align-middle hover:text-yellow-600 px-2 md:px-0">Home</a></li>
         <li><a href="/products.html" class="align-middle hover:text-yellow-600 px-2 md:px-0">Products</a></li>
@@ -35,9 +48,8 @@
   <header class="text-center text-white py-20 px-6 bg-cover bg-center bg-[url(/images/background.png)]">
     <div class="max-w-5xl mx-auto">
       <h1 class="text-6xl font-GreatVibes text-amber-50">About <span class="text-amber-300">Promise</span></h1>
-      <p class="mt-4 text-2xl text-amber-50">Crafting memorable looks for your most important day with care,
-        heritage, and modern
-        tailoring.</p>
+      <p class="mt-4 text-2xl text-amber-50">Where timeless design, thoughtful craftsmanship, and personalized service
+        come together for your most cherished moments.</p>
     </div>
   </header>
 
@@ -46,11 +58,11 @@
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start mb-12">
       <div>
         <h2 class="text-3xl font-semibold mb-4 text-amber-50">Our Story</h2>
-        <p class="text-amber-100 leading-relaxed mb-4">Promise was founded to bring beautifully crafted wedding
+        <p class="indent-8 text-amber-100 leading-relaxed mb-4">Promise was founded to bring beautifully crafted wedding
           attire to couples who want timeless elegance with modern comfort. We blend artisanal techniques with
           carefully chosen fabrics, focusing on fit, detail and sustainable practices. Our mission is to make
           every couple feel confident and celebrated.</p>
-        <ul class="text-sm text-amber-100 space-y-2">
+        <ul class="indent-8 text-sm text-amber-100 space-y-2">
           <li><span class="font-semibold text-amber-50">Mission:</span> Timeless design with exceptional
             craftsmanship.</li>
           <li><span class="font-semibold text-amber-50">Values:</span> Integrity, quality, and compassionate
@@ -61,15 +73,14 @@
       </div>
 
       <div class="rounded-lg overflow-hidden">
-        <img src="images/couple-photo.jpeg" alt="Our Atelier"
-          class="w-full h-80 object-cover rounded-lg shadow-lg" />
+        <img src="images/couple-photo.jpeg" alt="Our Atelier" class="w-full h-80 object-cover rounded-lg shadow-lg" />
       </div>
     </section>
 
     <!-- Process -->
     <section class="mb-12">
       <h2 class="text-3xl font-semibold mb-2 text-amber-50">Our Process</h2>
-      <p class="text-amber-100 leading-relaxed">From initial design sketches to the final fitting, our process
+      <p class="indent-8 text-amber-100 leading-relaxed">From initial design sketches to the final fitting, our process
         centers on collaboration. We consult closely with you to select fabrics, refine silhouettes, and ensure
         your dress or suit reflects your vision. Small production runs allow for careful quality control at
         every stage.</p>
@@ -168,6 +179,9 @@
       </span> | Designed for loving couple
     </div>
   </footer>
+
+  <script src="/js/jquery-3.7.1.min.js"></script>
+  <script src="/js/main.js"></script>
 
 </body>
 
