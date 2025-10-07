@@ -62,8 +62,8 @@
       </div>
     </header>
 
-    <main class="container mx-auto py-6">
-      <div class="flex flex-col gap-8 px-10 lg:flex-row">
+    <main class="container mx-auto px-4 py-6 sm:px-6">
+      <div class="flex flex-col-reverse gap-8 lg:flex-row">
         <!-- Cart list -->
         <section class="flex-1 space-y-6">
           <div class="mb-2 flex items-center gap-3">
@@ -73,13 +73,13 @@
 
           <!-- Cart item -->
           <article
-            class="flex items-center gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#070707] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700">
-            <div class="flex items-center">
-              <input type="checkbox" class="mr-4 h-5 w-5" />
+            class="flex flex-col items-start gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#252121] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700 md:flex-row md:items-center">
+            <div class="flex w-full items-start gap-4 md:w-auto md:items-center">
+              <input type="checkbox" class="h-5 w-5" />
               <img src="images/wedding dress.jpg" alt="Elegant Wedding Dress"
-                class="h-20 w-28 rounded-md object-cover" />
+                class="h-36 w-full rounded-md object-cover md:h-20 md:w-28" />
             </div>
-            <div class="flex-1">
+            <div class="w-full flex-1">
               <h3 class="font-semibold text-amber-300">
                 Elegant Wedding Dress
               </h3>
@@ -90,14 +90,14 @@
                   <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
                     -
                   </button>
-                  <input value="1" class="w-12 rounded-md text-center text-black" />
+                  <input value="1" class="w-12 rounded-md text-center text-amber-50" />
                   <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
                     +
                   </button>
                 </div>
               </div>
             </div>
-            <div class="text-right">
+            <div class="w-full text-right md:w-auto md:text-right">
               <div class="font-bold text-amber-300">$200.00</div>
               <button class="mt-3 rounded-md border border-white/40 px-3 py-1 text-white">
                 Remove
@@ -107,13 +107,13 @@
 
           <!-- Card 2 -->
           <article
-            class="flex items-center gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#070707] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700">
-            <div class="flex items-center">
-              <input type="checkbox" class="mr-4 h-5 w-5" />
+            class="flex flex-col items-start gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#252121] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700 md:flex-row md:items-center">
+            <div class="flex w-full items-start gap-4 md:w-auto md:items-center">
+              <input type="checkbox" class="h-5 w-5" />
               <img src="images/Pretty ball gown wedding dresses.jpg" alt="Pretty Ball Gown"
-                class="h-20 w-28 rounded-md object-cover" />
+                class="h-36 w-full rounded-md object-cover md:h-20 md:w-28" />
             </div>
-            <div class="flex-1">
+            <div class="w-full flex-1">
               <h3 class="font-semibold text-amber-300">Pretty Ball Gown</h3>
               <p class="text-sm text-white/80">Size: M • Color: White</p>
               <div class="mt-3 flex items-center gap-4">
@@ -122,14 +122,14 @@
                   <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
                     -
                   </button>
-                  <input value="2" class="w-12 rounded-md text-center text-black" />
+                  <input value="1" class="w-12 rounded-md text-center text-amber-50" />
                   <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
                     +
                   </button>
                 </div>
               </div>
             </div>
-            <div class="text-right">
+            <div class="w-full text-right md:w-auto md:text-right">
               <div class="font-bold text-amber-300">$300.00</div>
               <button class="mt-3 rounded-md border border-white/40 px-3 py-1 text-white">
                 Remove
@@ -139,13 +139,13 @@
 
           <!-- Card 3 -->
           <article
-            class="flex items-center gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#070707] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700">
-            <div class="flex items-center">
-              <input type="checkbox" class="mr-4 h-5 w-5" />
+            class="flex flex-col items-start gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#252121] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700 md:flex-row md:items-center">
+            <div class="flex w-full items-start gap-4 md:w-auto md:items-center">
+              <input type="checkbox" class="h-5 w-5" />
               <img src="images/Groom Wear For Indian Wedding Indian Wedding Sherwani For Groom.jpg" alt="Groom Sherwani"
-                class="h-20 w-28 rounded-md object-cover" />
+                class="h-36 w-full rounded-md object-cover md:h-20 md:w-28" />
             </div>
-            <div class="flex-1">
+            <div class="w-full flex-1">
               <h3 class="font-semibold text-amber-300">Groom Sherwani</h3>
               <p class="text-sm text-white/80">Size: L • Color: Gold</p>
               <div class="mt-3 flex items-center gap-4">
@@ -154,14 +154,14 @@
                   <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
                     -
                   </button>
-                  <input value="1" class="w-12 rounded-md text-center text-black" />
+                  <input value="1" class="w-12 rounded-md text-center text-amber-50" />
                   <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
                     +
                   </button>
                 </div>
               </div>
             </div>
-            <div class="text-right">
+            <div class="w-full text-right md:w-auto md:text-right">
               <div class="font-bold text-amber-300">$199.00</div>
               <button class="mt-3 rounded-md border border-white/40 px-3 py-1 text-white">
                 Remove
@@ -170,13 +170,13 @@
           </article>
 
           <article
-            class="flex items-center gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#070707] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700">
-            <div class="flex items-center">
-              <input type="checkbox" class="mr-4 h-5 w-5" />
+            class="flex flex-col items-start gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#252121] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700 md:flex-row md:items-center">
+            <div class="flex w-full items-start gap-4 md:w-auto md:items-center">
+              <input type="checkbox" class="h-5 w-5" />
               <img src="images/Groom Wear For Indian Wedding Indian Wedding Sherwani For Groom.jpg" alt="Groom Sherwani"
-                class="h-20 w-28 rounded-md object-cover" />
+                class="h-36 w-full rounded-md object-cover md:h-20 md:w-28" />
             </div>
-            <div class="flex-1">
+            <div class="w-full flex-1">
               <h3 class="font-semibold text-amber-300">Groom Sherwani</h3>
               <p class="text-sm text-white/80">Size: L • Color: Gold</p>
               <div class="mt-3 flex items-center gap-4">
@@ -185,14 +185,14 @@
                   <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
                     -
                   </button>
-                  <input value="1" class="w-12 rounded-md text-center text-black" />
+                  <input value="1" class="w-12 rounded-md text-center text-amber-50" />
                   <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
                     +
                   </button>
                 </div>
               </div>
             </div>
-            <div class="text-right">
+            <div class="w-full text-right md:w-auto md:text-right">
               <div class="font-bold text-amber-300">$199.00</div>
               <button class="mt-3 rounded-md border border-white/40 px-3 py-1 text-white">
                 Remove
@@ -201,13 +201,13 @@
           </article>
 
           <article
-            class="flex items-center gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#070707] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700">
-            <div class="flex items-center">
-              <input type="checkbox" class="mr-4 h-5 w-5" />
+            class="flex flex-col items-start gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#252121] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700 md:flex-row md:items-center">
+            <div class="flex w-full items-start gap-4 md:w-auto md:items-center">
+              <input type="checkbox" class="h-5 w-5" />
               <img src="images/Groom Wear For Indian Wedding Indian Wedding Sherwani For Groom.jpg" alt="Groom Sherwani"
-                class="h-20 w-28 rounded-md object-cover" />
+                class="h-36 w-full rounded-md object-cover md:h-20 md:w-28" />
             </div>
-            <div class="flex-1">
+            <div class="w-full flex-1">
               <h3 class="font-semibold text-amber-300">Groom Sherwani</h3>
               <p class="text-sm text-white/80">Size: L • Color: Gold</p>
               <div class="mt-3 flex items-center gap-4">
@@ -216,14 +216,14 @@
                   <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
                     -
                   </button>
-                  <input value="1" class="w-12 rounded-md text-center text-black" />
+                  <input value="1" class="w-12 rounded-md text-center text-amber-50" />
                   <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
                     +
                   </button>
                 </div>
               </div>
             </div>
-            <div class="text-right">
+            <div class="w-full text-right md:w-auto md:text-right">
               <div class="font-bold text-amber-300">$199.00</div>
               <button class="mt-3 rounded-md border border-white/40 px-3 py-1 text-white">
                 Remove
@@ -232,13 +232,13 @@
           </article>
 
           <article
-            class="flex items-center gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#070707] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700">
-            <div class="flex items-center">
-              <input type="checkbox" class="mr-4 h-5 w-5" />
+            class="flex flex-col items-start gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#252121] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700 md:flex-row md:items-center">
+            <div class="flex w-full items-start gap-4 md:w-auto md:items-center">
+              <input type="checkbox" class="h-5 w-5" />
               <img src="images/Groom Wear For Indian Wedding Indian Wedding Sherwani For Groom.jpg" alt="Groom Sherwani"
-                class="h-20 w-28 rounded-md object-cover" />
+                class="h-36 w-full rounded-md object-cover md:h-20 md:w-28" />
             </div>
-            <div class="flex-1">
+            <div class="w-full flex-1">
               <h3 class="font-semibold text-amber-300">Groom Sherwani</h3>
               <p class="text-sm text-white/80">Size: L • Color: Gold</p>
               <div class="mt-3 flex items-center gap-4">
@@ -247,14 +247,14 @@
                   <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
                     -
                   </button>
-                  <input value="1" class="w-12 rounded-md text-center text-black" />
+                  <input value="1" class="w-12 rounded-md text-center text-amber-50" />
                   <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
                     +
                   </button>
                 </div>
               </div>
             </div>
-            <div class="text-right">
+            <div class="w-full text-right md:w-auto md:text-right">
               <div class="font-bold text-amber-300">$199.00</div>
               <button class="mt-3 rounded-md border border-white/40 px-3 py-1 text-white">
                 Remove
@@ -263,13 +263,13 @@
           </article>
 
           <article
-            class="flex items-center gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#070707] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700">
-            <div class="flex items-center">
-              <input type="checkbox" class="mr-4 h-5 w-5" />
+            class="flex flex-col items-start gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#252121] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700 md:flex-row md:items-center">
+            <div class="flex w-full items-start gap-4 md:w-auto md:items-center">
+              <input type="checkbox" class="h-5 w-5" />
               <img src="images/Groom Wear For Indian Wedding Indian Wedding Sherwani For Groom.jpg" alt="Groom Sherwani"
-                class="h-20 w-28 rounded-md object-cover" />
+                class="h-36 w-full rounded-md object-cover md:h-20 md:w-28" />
             </div>
-            <div class="flex-1">
+            <div class="w-full flex-1">
               <h3 class="font-semibold text-amber-300">Groom Sherwani</h3>
               <p class="text-sm text-white/80">Size: L • Color: Gold</p>
               <div class="mt-3 flex items-center gap-4">
@@ -278,14 +278,14 @@
                   <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
                     -
                   </button>
-                  <input value="1" class="w-12 rounded-md text-center text-black" />
+                  <input value="1" class="w-12 rounded-md text-center text-amber-50" />
                   <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
                     +
                   </button>
                 </div>
               </div>
             </div>
-            <div class="text-right">
+            <div class="w-full text-right md:w-auto md:text-right">
               <div class="font-bold text-amber-300">$199.00</div>
               <button class="mt-3 rounded-md border border-white/40 px-3 py-1 text-white">
                 Remove
@@ -293,7 +293,7 @@
             </div>
           </article>
 
-          <div class="mt-8 flex justify-center pl-113">
+          <div class="mt-8 flex justify-center">
             <a href="/products.html"
               class="inline-block rounded-full bg-amber-500 px-8 py-4 font-semibold text-black transition hover:shadow-[0_0_40px_rgba(255,160,0,0.55)]">Continue
               Shopping</a>
