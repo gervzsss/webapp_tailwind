@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home - Promise</title>
-
   <link rel="stylesheet" href="dist/styles.css" />
 </head>
 
@@ -43,9 +42,14 @@
           <a href="/cart.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">🛒 Cart</a>
         </li>
         <li>
-          <a href="#"
+          <a href="#" id="open-login" role="button" aria-haspopup="dialog" aria-controls="login-modal"
             class="inline-block cursor-pointer rounded-lg bg-amber-600 px-4 py-1 align-middle font-sans text-sm text-amber-50 shadow-[0_0_10px_#FF8C00] transition-all duration-300 hover:bg-[#FF8C00] hover:text-white hover:shadow-[0_0_20px_#FF8C00] sm:text-base">Log
             In</a>
+        </li>
+        <li>
+          <a href="#" id="open-signup" role="button" aria-haspopup="dialog" aria-controls="signup-modal"
+            class="inline-block cursor-pointer rounded-lg border border-amber-600 px-4 py-1 align-middle font-sans text-sm text-amber-50 transition-all duration-300 hover:bg-white/5 sm:text-base">Sign
+            Up</a>
         </li>
       </ul>
     </div>
@@ -191,6 +195,7 @@
 
   <script src="/js/jquery-3.7.1.min.js"></script>
   <script src="/js/main.js"></script>
+
 </body>
 
 </html>

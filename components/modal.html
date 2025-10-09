@@ -1,0 +1,75 @@
+<!-- Modals: Login & Signup -->
+<div id="modal-overlay" class="fixed inset-0 z-40 hidden items-center justify-center bg-black/60">
+  <!-- Login Modal -->
+  <div id="login-modal" class="mx-4 max-w-md rounded-lg bg-black p-6 text-white opacity-0 shadow-lg transition-opacity"
+    role="dialog" aria-modal="true" aria-labelledby="login-title">
+    <div class="flex items-center justify-between">
+      <h2 id="login-title" class="text-xl font-semibold text-amber-50">
+        Log in
+      </h2>
+      <button class="cursor-pointer text-amber-200 hover:text-amber-50" id="close-login" aria-label="Close login modal">
+        ×
+      </button>
+    </div>
+    <form class="mt-4 space-y-4" id="login-form">
+      <div>
+        <label class="mb-1 block text-sm text-amber-100">Email</label>
+        <input type="email" required
+          class="w-full rounded-md border border-gray-700 bg-[#0b0b0b] px-3 py-2 text-white" />
+      </div>
+      <div>
+        <label class="mb-1 block text-sm text-amber-100">Password</label>
+        <input type="password" required
+          class="w-full rounded-md border border-gray-700 bg-[#0b0b0b] px-3 py-2 text-white" />
+      </div>
+      <div class="flex items-center justify-between">
+        <button type="submit" class="cursor-pointer rounded-md bg-amber-500 px-4 py-2 font-semibold text-black">
+          Sign in
+        </button>
+        <button type="button" id="switch-to-signup" class="cursor-pointer text-sm text-amber-300 underline">
+          Create an account
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="signup-modal"
+    class="mx-4 hidden max-w-md rounded-lg bg-black p-6 text-white opacity-0 shadow-lg transition-opacity" role="dialog"
+    aria-modal="true" aria-labelledby="signup-title">
+    <div class="flex items-center justify-between">
+      <h2 id="signup-title" class="text-xl font-semibold text-amber-50">
+        Sign up
+      </h2>
+      <button class="cursor-pointer text-amber-200 hover:text-amber-50" id="close-signup"
+        aria-label="Close signup modal">
+        ×
+      </button>
+    </div>
+    <form class="mt-4 space-y-4" id="signup-form">
+      <div>
+        <label class="mb-1 block text-sm text-amber-100">Email</label>
+        <input type="email" required
+          class="w-full rounded-md border border-gray-700 bg-[#0b0b0b] px-3 py-2 text-white" />
+      </div>
+      <div>
+        <label class="mb-1 block text-sm text-amber-100">Password</label>
+        <input type="password" required
+          class="w-full rounded-md border border-gray-700 bg-[#0b0b0b] px-3 py-2 text-white" />
+      </div>
+      <div>
+        <label class="mb-1 block text-sm text-amber-100">Confirm Password</label>
+        <input type="password" required
+          class="w-full rounded-md border border-gray-700 bg-[#0b0b0b] px-3 py-2 text-white" />
+      </div>
+      <div class="flex items-center justify-between">
+        <button type="submit" class="cursor-pointer rounded-md bg-amber-500 px-4 py-2 font-semibold text-black">
+          Create account
+        </button>
+        <button type="button" id="switch-to-login" class="cursor-pointer text-sm text-amber-300 underline">
+          Already have an account?
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
