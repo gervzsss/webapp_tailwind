@@ -1,7 +1,7 @@
-<!-- Modals: Login & Register -->
+<!-- modals: login & register -->
 <div id="modal-overlay"
   class="fixed inset-0 z-40 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-10">
-  <!-- Login Modal -->
+  <!-- login Modal -->
   <div id="login-modal"
     class="modal-panel relative mx-auto hidden w-full max-w-[440px] scale-95 rounded-2xl border border-amber-500/15 bg-gradient-to-b from-[#1b1b1b] via-black to-black/90 p-8 text-white opacity-0 shadow-2xl ring-1 shadow-amber-500/10 ring-white/5 transition-all duration-300"
     role="dialog" aria-modal="true" aria-labelledby="login-title">
@@ -14,9 +14,10 @@
     </h2>
     <p class="mb-6 text-center text-sm text-white/60">
       Sign in to continue your journey with
-      <span class="font-GreatVibes text-amber-400">Promise</span>.
+      <span class="animate-glow font-GreatVibes text-amber-400">Pro</span><span
+        class="animate-glow font-GreatVibes text-amber-50">mise</span>.
     </p>
-    <form id="login-form" class="space-y-5">
+    <form novalidate id="login-form" class="space-y-5">
       <div>
         <label for="login-email" class="mb-1 block text-sm font-medium text-amber-100">Email</label>
         <input id="login-email" type="email" autocomplete="email"
@@ -45,7 +46,7 @@
     </form>
   </div>
 
-  <!-- Register Modal -->
+  <!-- register Modal -->
   <div id="signup-modal"
     class="modal-panel relative mx-auto hidden w-full max-w-[480px] scale-95 rounded-2xl border border-amber-500/15 bg-gradient-to-b from-[#1b1b1b] via-black to-black/90 p-8 text-white opacity-0 shadow-2xl ring-1 shadow-amber-500/10 ring-white/5 transition-all duration-300"
     role="dialog" aria-modal="true" aria-labelledby="signup-title">
@@ -60,7 +61,7 @@
       Join <span class="font-GreatVibes text-amber-400">Promise</span> and begin
       exploring.
     </p>
-    <form id="signup-form" class="space-y-5">
+    <form novalidate id="signup-form" class="space-y-5">
       <div class="grid gap-5 sm:grid-cols-2">
         <div>
           <label for="reg-first" class="mb-1 block text-sm font-medium text-amber-100">First Name</label>

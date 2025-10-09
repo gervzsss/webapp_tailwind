@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  console.log("✅ jQuery navbar & modal system ready");
 
   // loads the modal
   $.get("/components/modal.html", function (data) {
@@ -18,7 +17,8 @@ $(document).ready(function () {
 
   // login/signup
   function initializeModalLogic() {
-    console.log("✅ Modal logic initialized");
+
+    let formSubmitted = false;
 
     function ensureToastContainer() {
       let $c = $("#toast-container");
@@ -42,7 +42,7 @@ $(document).ready(function () {
       }, 2800);
     }
 
-    // --- validation Regex ---
+    // --- validation regex ---
     const nameRegex = /^[A-Za-z\s.\-']+$/;
     const emailRegex = /^[A-Za-z0-9._\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$/;
     const phoneRegex = /^\+?\d+$/;
@@ -144,7 +144,14 @@ $(document).ready(function () {
     function closeModals() {
       const $overlay = $('#modal-overlay');
       $('.modal-panel:visible').each(function () { animateOut($(this)); });
-      setTimeout(() => { $overlay.addClass('hidden').hide(); }, 200);
+      setTimeout(() => {
+        $overlay.addClass('hidden').hide();
+        formSubmitted = false;
+        $overlay.find('input').val('');
+        $overlay.find('[data-error-for]').text('').addClass('hidden');
+        $overlay.find('input')
+          .removeClass('border-red-400 focus:border-red-400 focus:ring-red-400');
+      }, 200);
     }
 
     // open login
@@ -172,7 +179,6 @@ $(document).ready(function () {
       $("#login-modal").hide();
       openModal("#signup-modal");
     });
-
     $(document).on("click", "#switch-to-login", function (e) {
       e.preventDefault();
       $("#signup-modal").hide();
@@ -192,21 +198,40 @@ $(document).ready(function () {
       if (e.key === 'Escape') closeModals();
     });
 
-    // focus
-    // $(document).on('input blur', '#login-email', validateLoginEmail);
-    // $(document).on('input blur', '#login-password', validateLoginPassword);
+    // --- real-time validation while typing ---
+    $(document).on('input', '#login-email', validateLoginEmail);
+    $(document).on('input', '#login-password', validateLoginPassword);
 
-    // $(document).on('input blur', '#reg-first', validateFirst);
-    // $(document).on('input blur', '#reg-last', validateLast);
-    // $(document).on('input blur', '#reg-address', validateAddress);
-    // $(document).on('input blur', '#reg-email', validateEmail);
-    // $(document).on('input blur', '#reg-phone', validatePhone);
-    // $(document).on('input blur', '#reg-pass', validatePass);
-    // $(document).on('input blur', '#reg-pass-confirm', validatePassConfirm());
+    $(document).on('input', '#reg-first', validateFirst);
+    $(document).on('input', '#reg-last', validateLast);
+    $(document).on('input', '#reg-address', validateAddress);
+    $(document).on('input', '#reg-email', validateEmail);
+    $(document).on('input', '#reg-phone', validatePhone);
+    $(document).on('input', '#reg-pass', validatePass);
+    $(document).on('input', '#reg-pass-confirm', validatePassConfirm);
+
+    // --- validate on blur after first submit ---
+    $(document).on('blur', 'input', function () {
+      if (formSubmitted) {
+        const id = $(this).attr('id');
+        switch (id) {
+          case 'login-email': validateLoginEmail(); break;
+          case 'login-password': validateLoginPassword(); break;
+          case 'reg-first': validateFirst(); break;
+          case 'reg-last': validateLast(); break;
+          case 'reg-address': validateAddress(); break;
+          case 'reg-email': validateEmail(); break;
+          case 'reg-phone': validatePhone(); break;
+          case 'reg-pass': validatePass(); break;
+          case 'reg-pass-confirm': validatePassConfirm(); break;
+        }
+      }
+    });
 
     // form submissions
     $(document).on('submit', '#login-form', function (e) {
       e.preventDefault();
+      formSubmitted = true;
       const ok = validateLoginEmail() & validateLoginPassword();
       if (!ok) return;
       closeModals();
@@ -216,7 +241,9 @@ $(document).ready(function () {
 
     $(document).on('submit', '#signup-form', function (e) {
       e.preventDefault();
-      const ok = validateFirst() & validateLast() & validateAddress() & validateEmail() & validatePhone() & validatePass() & validatePassConfirm();
+      formSubmitted = true;
+      const ok = validateFirst() & validateLast() & validateAddress() &
+        validateEmail() & validatePhone() & validatePass() & validatePassConfirm();
       if (!ok) return;
       closeModals();
       showToast('Account created successfully!');
