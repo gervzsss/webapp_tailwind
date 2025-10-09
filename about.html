@@ -134,25 +134,35 @@
           Have questions or want to schedule a fitting? Send us a message and
           we'll get back to you within 48 hours.
         </p>
-        <form class="space-y-4">
+        <form id="contact-form" class="space-y-4" novalidate>
           <div>
-            <label class="mb-1 block text-sm text-amber-100">Name</label>
-            <input class="w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-black" />
+            <label for="contact-name" class="mb-1 block text-sm text-amber-100">Name <span
+                class="text-red-500">*</span></label>
+            <input id="contact-name" name="name" autocomplete="name"
+              class="w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-black focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
+            <div class="contact-error hidden text-xs text-red-600 mt-1" data-error-for="contact-name"></div>
           </div>
           <div>
-            <label class="mb-1 block text-sm text-amber-100">Email</label>
-            <input class="w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-black" />
+            <label for="contact-email" class="mb-1 block text-sm text-amber-100">Email <span
+                class="text-red-500">*</span></label>
+            <input id="contact-email" name="email" autocomplete="email"
+              class="w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-black focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
+            <div class="contact-error hidden text-xs text-red-600 mt-1" data-error-for="contact-email"></div>
           </div>
           <div>
-            <label class="mb-1 block text-sm text-amber-100">Subject</label>
-            <input class="w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-black" />
+            <label for="contact-subject" class="mb-1 block text-sm text-amber-100">Subject</label>
+            <input id="contact-subject" name="subject"
+              class="w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-black focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
           </div>
           <div>
-            <label class="mb-1 block text-sm text-amber-100">Message</label>
-            <textarea class="h-32 w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-black"></textarea>
+            <label for="contact-message" class="mb-1 block text-sm text-amber-100">Message <span
+                class="text-red-500">*</span></label>
+            <textarea id="contact-message" name="message"
+              class="h-32 w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-black resize-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"></textarea>
+            <div class="contact-error hidden text-xs text-red-600 mt-1" data-error-for="contact-message"></div>
           </div>
-          <button
-            class="w-full rounded-md bg-gradient-to-r from-amber-500 to-amber-600 px-4 py-3 font-semibold text-black shadow-[0_8px_30px_rgba(255,166,0,0.25)] transition hover:shadow-[0_0_30px_rgba(255,214,0,0.35)]">
+          <button type="submit"
+            class="w-full rounded-md bg-gradient-to-r from-amber-500 to-amber-600 px-4 py-3 font-semibold text-black shadow-[0_8px_30px_rgba(255,166,0,0.25)] transition hover:shadow-[0_0_30px_rgba(255,214,0,0.35)] focus:outline-none focus:ring-2 focus:ring-amber-500">
             Send Message
           </button>
         </form>
@@ -232,6 +242,7 @@
 
   <script src="/js/jquery-3.7.1.min.js"></script>
   <script src="/js/main.js"></script>
+  <script src="/js/contact-us.js"></script>
 </body>
 
 </html>
