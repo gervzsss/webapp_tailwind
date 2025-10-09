@@ -4,7 +4,9 @@ if ($contactForm.length) {
   function ensureToastContainer() {
     let $c = $("#toast-container");
     if (!$c.length) {
-      $c = $('<div id="toast-container" class="fixed top-4 right-4 z-50 flex flex-col gap-3"></div>');
+      $c = $(
+        '<div id="toast-container" class="fixed top-4 right-4 z-50 flex flex-col gap-3"></div>',
+      );
       $("body").append($c);
     }
     return $c;
@@ -12,10 +14,14 @@ if ($contactForm.length) {
 
   function showToast(message) {
     const $c = ensureToastContainer();
-    const $toast = $('<div class="pointer-events-auto select-none rounded-md bg-amber-600 px-4 py-3 text-sm font-medium text-white shadow-lg ring-1 ring-amber-500/50 opacity-0 -translate-y-2 transition duration-300"></div>').text(message);
+    const $toast = $(
+      '<div class="pointer-events-auto select-none rounded-md bg-amber-600 px-4 py-3 text-sm font-medium text-white shadow-lg ring-1 ring-amber-500/50 opacity-0 -translate-y-2 transition duration-300"></div>',
+    ).text(message);
     $c.append($toast);
     requestAnimationFrame(() => {
-      $toast.removeClass("opacity-0 -translate-y-2").addClass("opacity-100 translate-y-0");
+      $toast
+        .removeClass("opacity-0 -translate-y-2")
+        .addClass("opacity-100 translate-y-0");
     });
     setTimeout(() => {
       $toast.addClass("opacity-0 -translate-y-2");
@@ -32,7 +38,9 @@ if ($contactForm.length) {
       $field.addClass("border-red-400 focus:border-red-400 focus:ring-red-400");
     } else {
       $err.text("").addClass("hidden");
-      $field.removeClass("border-red-400 focus:border-red-400 focus:ring-red-400");
+      $field.removeClass(
+        "border-red-400 focus:border-red-400 focus:ring-red-400",
+      );
     }
   }
 
@@ -73,26 +81,34 @@ if ($contactForm.length) {
   const fieldInteraction = {};
 
   // realtime validation
-  $(document).on("input", "#contact-name, #contact-email, #contact-message", function () {
-    const id = $(this).attr("id");
-    fieldInteraction[id] = true;
-    const error = validators[id]();
-    setFieldError($(this), error);
-  });
-
-  // blur will not trigger until form submission
-  $(document).on("blur", "#contact-name, #contact-email, #contact-message", function () {
-    const id = $(this).attr("id");
-    if (formSubmitted) {
+  $(document).on(
+    "input",
+    "#contact-name, #contact-email, #contact-message",
+    function () {
+      const id = $(this).attr("id");
+      fieldInteraction[id] = true;
       const error = validators[id]();
       setFieldError($(this), error);
-    } else {
-      if (fieldInteraction[id]) {
+    },
+  );
+
+  // blur will not trigger until form submission
+  $(document).on(
+    "blur",
+    "#contact-name, #contact-email, #contact-message",
+    function () {
+      const id = $(this).attr("id");
+      if (formSubmitted) {
         const error = validators[id]();
         setFieldError($(this), error);
+      } else {
+        if (fieldInteraction[id]) {
+          const error = validators[id]();
+          setFieldError($(this), error);
+        }
       }
-    }
-  });
+    },
+  );
 
   // --- enter does not submit the form ---
   $contactForm.on("keydown", "input, textarea", function (e) {
@@ -117,9 +133,13 @@ if ($contactForm.length) {
 
     if (!allValid) return;
     showToast("Message submitted successfully!");
-    $("#contact-name, #contact-email, #contact-subject, #contact-message").val("");
+    $("#contact-name, #contact-email, #contact-subject, #contact-message").val(
+      "",
+    );
     $(".contact-error").text("").addClass("hidden");
-    $("input, textarea").removeClass("border-red-400 focus:border-red-400 focus:ring-red-400");
+    $("input, textarea").removeClass(
+      "border-red-400 focus:border-red-400 focus:ring-red-400",
+    );
 
     formSubmitted = false;
     for (const key in fieldInteraction) fieldInteraction[key] = false;
