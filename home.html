@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home - Promise</title>
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
   <link rel="stylesheet" href="dist/styles.css" />
 </head>
 
@@ -16,11 +17,11 @@
         <a href="/home.html"
           class="md:text font-GreatVibes animate-glow text-3xl text-amber-300 hover:text-amber-500 lg:pl-15 lg:text-5xl">
           Pro<span class="font-GreatVibes text-amber-50 hover:text-amber-300">mise</span></a>
-        <!-- Mobile menu button -->
+        <!-- mobile menu button -->
         <button id="nav-toggle" aria-controls="nav-menu" aria-expanded="false"
           class="inline-flex items-center justify-center rounded-md p-2 text-amber-50 hover:bg-white/5 focus:ring-2 focus:ring-amber-500 focus:outline-none md:hidden">
           <span class="sr-only">Open main menu</span>
-          <!-- simple hamburger icon -->
+          <!-- hamburger icon -->
           <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
             aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -28,7 +29,7 @@
         </button>
       </div>
       <ul id="nav-menu"
-        class="hidden flex-col items-center space-y-2 text-lg text-amber-50 sm:text-xl md:flex md:flex-row md:space-y-0 md:space-x-10">
+        class="hidden flex-col items-center space-y-2 text-center text-lg text-amber-50 sm:text-xl md:flex md:flex-row md:space-y-0 md:space-x-10">
         <li>
           <a href="/home.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">Home</a>
         </li>
@@ -43,13 +44,8 @@
         </li>
         <li>
           <a href="#" id="open-login" role="button" aria-haspopup="dialog" aria-controls="login-modal"
-            class="inline-block cursor-pointer rounded-lg bg-amber-600 px-4 py-1 align-middle font-sans text-sm text-amber-50 shadow-[0_0_10px_#FF8C00] transition-all duration-300 hover:bg-[#FF8C00] hover:text-white hover:shadow-[0_0_20px_#FF8C00] sm:text-base">Log
+            class="inline-block cursor-pointer rounded-lg bg-amber-600 px-4 py-1 align-middle font-sans text-sm text-amber-50 shadow-[0_0_10px_#FF8C00] transition-all duration-300 hover:bg-[#FF8C00] hover:text-white hover:shadow-[0_0_20px_#FF8C00] sm:text-base">Sign
             In</a>
-        </li>
-        <li>
-          <a href="#" id="open-signup" role="button" aria-haspopup="dialog" aria-controls="signup-modal"
-            class="inline-block cursor-pointer rounded-lg border border-amber-600 px-4 py-1 align-middle font-sans text-sm text-amber-50 transition-all duration-300 hover:bg-white/5 sm:text-base">Sign
-            Up</a>
         </li>
       </ul>
     </div>
@@ -70,7 +66,7 @@
     </div>
   </header>
 
-  <!-- PRODUCTS -->
+  <!-- FEATURED PRODUCTS -->
   <section class="flex-grow py-6">
     <div class="mx-auto max-w-screen-xl px-4">
       <h2 class="font-Tinos animate-glow my-0.5 mb-6 text-center text-2xl font-bold text-amber-600 sm:text-3xl">
@@ -176,7 +172,7 @@
     </div>
   </section>
 
-  <!-- Shopping -->
+  <!-- Go Shopping Button -->
   <div class="m-6 flex justify-center sm:m-8">
     <a href="/products.html"
       class="inline-block rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-black transition hover:shadow-[0_0_40px_rgba(255,160,0,0.55)] sm:px-8 sm:py-4 sm:text-base">Go
@@ -184,8 +180,8 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 py-4 text-center text-white">
-    <div class="animate-glow-slow mt-3 align-middle text-sm sm:text-base">
+  <footer class="bg-gray-900 text-center text-white">
+    <div class="animate-glow-slow my-2 mt-3 align-middle text-sm sm:text-base">
       © 2025
       <span class="font-GreatVibes align-middle text-xl text-amber-500 sm:text-2xl">Pro</span><span
         class="font-GreatVibes text-xl sm:text-2xl">mise</span> |
@@ -195,7 +191,6 @@
 
   <script src="/js/jquery-3.7.1.min.js"></script>
   <script src="/js/main.js"></script>
-
 </body>
 
 </html>

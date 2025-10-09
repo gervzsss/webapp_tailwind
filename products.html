@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products - Promise</title>
-
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
   <link rel="stylesheet" href="dist/styles.css" />
 </head>
 
@@ -15,12 +15,13 @@
     <div class="container mx-auto flex flex-col items-center justify-between gap-4 p-4 md:flex-row md:gap-0">
       <div class="flex w-full items-center justify-between md:w-auto">
         <a href="/home.html"
-          class="md:text font-GreatVibes animate-glow text-3xl text-amber-300 hover:text-amber-500 lg:pl-15 lg:text-5xl">Pro<span
-            class="font-GreatVibes text-amber-50 hover:text-amber-300">mise</span></a>
-        <!-- Mobile menu button -->
+          class="md:text font-GreatVibes animate-glow text-3xl text-amber-300 hover:text-amber-500 lg:pl-15 lg:text-5xl">
+          Pro<span class="font-GreatVibes text-amber-50 hover:text-amber-300">mise</span></a>
+        <!-- mobile menu button -->
         <button id="nav-toggle" aria-controls="nav-menu" aria-expanded="false"
           class="inline-flex items-center justify-center rounded-md p-2 text-amber-50 hover:bg-white/5 focus:ring-2 focus:ring-amber-500 focus:outline-none md:hidden">
           <span class="sr-only">Open main menu</span>
+          <!-- hamburger icon -->
           <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
             aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -28,7 +29,7 @@
         </button>
       </div>
       <ul id="nav-menu"
-        class="hidden flex-col items-center space-y-2 text-lg text-amber-50 sm:text-xl md:flex md:flex-row md:space-y-0 md:space-x-10">
+        class="hidden flex-col items-center space-y-2 text-center text-lg text-amber-50 sm:text-xl md:flex md:flex-row md:space-y-0 md:space-x-10">
         <li>
           <a href="/home.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">Home</a>
         </li>
@@ -42,8 +43,8 @@
           <a href="/cart.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">🛒 Cart</a>
         </li>
         <li>
-          <a href="#"
-            class="inline-block cursor-pointer rounded-lg bg-amber-600 px-4 py-1 align-middle font-sans text-sm text-amber-50 shadow-[0_0_10px_#FF8C00] transition-all duration-300 hover:bg-[#FF8C00] hover:text-white hover:shadow-[0_0_20px_#FF8C00] sm:text-base">Log
+          <a href="#" id="open-login" role="button" aria-haspopup="dialog" aria-controls="login-modal"
+            class="inline-block cursor-pointer rounded-lg bg-amber-600 px-4 py-1 align-middle font-sans text-sm text-amber-50 shadow-[0_0_10px_#FF8C00] transition-all duration-300 hover:bg-[#FF8C00] hover:text-white hover:shadow-[0_0_20px_#FF8C00] sm:text-base">Sign
             In</a>
         </li>
       </ul>
@@ -64,10 +65,10 @@
     </div>
   </header>
 
-  <!-- PAGE CONTENT -->
+  <!-- MAIN CONTENT -->
   <main class="mx-auto max-w-screen-xl flex-1 px-4 py-8">
     <div class="flex flex-col gap-8 lg:flex-row">
-      <!-- SIDEBAR FILTERS (stack on mobile) -->
+      <!-- SIDEBAR FILTERS -->
       <aside
         class="w-full self-start rounded-lg border border-amber-800 bg-gradient-to-b from-[#d7c0a2] to-[#111111] p-6 shadow-lg lg:sticky lg:top-24 lg:w-72">
         <h3 class="mb-4 font-semibold text-amber-300">FILTERS</h3>
@@ -117,7 +118,7 @@
         </div>
       </aside>
 
-      <!-- MAIN LIST -->
+      <!-- ALL PRODUCTS -->
       <section class="flex-1">
         <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div class="flex flex-shrink-0 items-center gap-3">
@@ -232,6 +233,7 @@
             </div>
           </article>
 
+          <!-- Product Card 4 -->
           <article
             class="flex flex-col overflow-hidden rounded-lg border border-[#e18624] bg-black shadow-[0_8px_30px_rgba(255,214,0,0.12)]">
             <div class="relative h-56 overflow-hidden sm:h-64 md:h-72 lg:h-80">
@@ -261,6 +263,7 @@
             </div>
           </article>
 
+          <!-- Product Card 5 -->
           <article
             class="flex flex-col overflow-hidden rounded-lg border border-[#e18624] bg-black shadow-[0_8px_30px_rgba(255,214,0,0.12)]">
             <div class="relative h-56 overflow-hidden sm:h-64 md:h-72 lg:h-80">
@@ -287,6 +290,7 @@
             </div>
           </article>
 
+          <!-- Product Card 6 -->
           <article
             class="flex flex-col overflow-hidden rounded-lg border border-[#e18624] bg-black shadow-[0_8px_30px_rgba(255,214,0,0.12)]">
             <div class="relative h-56 overflow-hidden sm:h-64 md:h-72 lg:h-80">
@@ -321,11 +325,11 @@
 
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-center text-white">
-    <div class="animate-glow-slow mt-3 align-middle">
+    <div class="animate-glow-slow my-2 mt-3 align-middle text-sm sm:text-base">
       © 2025
-      <span class="font-GreatVibes align-middle text-2xl text-amber-500">Pro</span><span
-        class="font-GreatVibes text-2xl">mise </span> | Designed for
-      loving couple
+      <span class="font-GreatVibes align-middle text-xl text-amber-500 sm:text-2xl">Pro</span><span
+        class="font-GreatVibes text-xl sm:text-2xl">mise</span> |
+      Designed for loving couple
     </div>
   </footer>
 
