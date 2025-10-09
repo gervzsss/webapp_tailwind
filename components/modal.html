@@ -1,73 +1,125 @@
-<!-- Modals: Login & Signup -->
-<div id="modal-overlay" class="fixed inset-0 z-40 hidden items-center justify-center bg-black/60">
+<!-- Modals: Login & Register -->
+<div id="modal-overlay"
+  class="fixed inset-0 z-40 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-10">
   <!-- Login Modal -->
-  <div id="login-modal" class="mx-4 max-w-md rounded-lg bg-black p-6 text-white opacity-0 shadow-lg transition-opacity"
+  <div id="login-modal"
+    class="modal-panel relative mx-auto hidden w-full max-w-[440px] scale-95 rounded-2xl border border-amber-500/15 bg-gradient-to-b from-[#1b1b1b] via-black to-black/90 p-8 text-white opacity-0 shadow-2xl ring-1 shadow-amber-500/10 ring-white/5 transition-all duration-300"
     role="dialog" aria-modal="true" aria-labelledby="login-title">
-    <div class="flex items-center justify-between">
-      <h2 id="login-title" class="text-xl font-semibold text-amber-50">
-        Log in
-      </h2>
-      <button class="cursor-pointer text-amber-200 hover:text-amber-50" id="close-login" aria-label="Close login modal">
-        ×
-      </button>
-    </div>
-    <form class="mt-4 space-y-4" id="login-form">
+    <button id="close-login" aria-label="Close login modal"
+      class="absolute top-4 right-4 cursor-pointer text-5xl font-semibold text-amber-300/70 transition hover:rotate-90 hover:text-amber-200">
+      ×
+    </button>
+    <h2 id="login-title" class="font-RobotoCondensed mb-2 text-center text-3xl font-semibold text-amber-200">
+      Welcome Back
+    </h2>
+    <p class="mb-6 text-center text-sm text-white/60">
+      Sign in to continue your journey with
+      <span class="font-GreatVibes text-amber-400">Promise</span>.
+    </p>
+    <form id="login-form" class="space-y-5">
       <div>
-        <label class="mb-1 block text-sm text-amber-100">Email</label>
-        <input type="email" required
-          class="w-full rounded-md border border-gray-700 bg-[#0b0b0b] px-3 py-2 text-white" />
+        <label for="login-email" class="mb-1 block text-sm font-medium text-amber-100">Email</label>
+        <input id="login-email" type="email" autocomplete="email"
+          class="w-full rounded-md border border-white/10 bg-[#0b0b0b] px-3 py-2 text-white placeholder-white/30 focus:border-amber-400 focus:ring-2 focus:ring-amber-500/50 focus:outline-none" />
+        <p data-error-for="login-email" class="mt-1 hidden text-xs font-medium text-red-400"></p>
       </div>
       <div>
-        <label class="mb-1 block text-sm text-amber-100">Password</label>
-        <input type="password" required
-          class="w-full rounded-md border border-gray-700 bg-[#0b0b0b] px-3 py-2 text-white" />
+        <label for="login-password" class="mb-1 block text-sm font-medium text-amber-100">Password</label>
+        <input id="login-password" type="password" autocomplete="current-password"
+          class="w-full rounded-md border border-white/10 bg-[#0b0b0b] px-3 py-2 text-white placeholder-white/30 focus:border-amber-400 focus:ring-2 focus:ring-amber-500/50 focus:outline-none" />
+        <p data-error-for="login-password" class="mt-1 hidden text-xs font-medium text-red-400"></p>
       </div>
-      <div class="flex items-center justify-between">
-        <button type="submit" class="cursor-pointer rounded-md bg-amber-500 px-4 py-2 font-semibold text-black">
-          Sign in
+      <div class="pt-2">
+        <button type="submit"
+          class="w-full cursor-pointer rounded-full bg-amber-500 px-6 py-2 font-semibold text-black transition hover:shadow-[0_0_25px_rgba(255,160,0,0.55)] focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none">
+          Sign In
         </button>
-        <button type="button" id="switch-to-signup" class="cursor-pointer text-sm text-amber-300 underline">
-          Create an account
+      </div>
+      <div class="text-center text-sm text-white/60">
+        No account yet?
+        <button type="button" id="switch-to-signup"
+          class="cursor-pointer text-amber-400 underline decoration-amber-400/40 underline-offset-4 hover:text-amber-300">
+          Create one
         </button>
       </div>
     </form>
   </div>
 
-  <!-- Signup Modal -->
+  <!-- Register Modal -->
   <div id="signup-modal"
-    class="mx-4 hidden max-w-md rounded-lg bg-black p-6 text-white opacity-0 shadow-lg transition-opacity" role="dialog"
-    aria-modal="true" aria-labelledby="signup-title">
-    <div class="flex items-center justify-between">
-      <h2 id="signup-title" class="text-xl font-semibold text-amber-50">
-        Sign up
-      </h2>
-      <button class="cursor-pointer text-amber-200 hover:text-amber-50" id="close-signup"
-        aria-label="Close signup modal">
-        ×
-      </button>
-    </div>
-    <form class="mt-4 space-y-4" id="signup-form">
-      <div>
-        <label class="mb-1 block text-sm text-amber-100">Email</label>
-        <input type="email" required
-          class="w-full rounded-md border border-gray-700 bg-[#0b0b0b] px-3 py-2 text-white" />
+    class="modal-panel relative mx-auto hidden w-full max-w-[480px] scale-95 rounded-2xl border border-amber-500/15 bg-gradient-to-b from-[#1b1b1b] via-black to-black/90 p-8 text-white opacity-0 shadow-2xl ring-1 shadow-amber-500/10 ring-white/5 transition-all duration-300"
+    role="dialog" aria-modal="true" aria-labelledby="signup-title">
+    <button id="close-signup" aria-label="Close signup modal"
+      class="absolute top-4 right-4 cursor-pointer text-5xl font-semibold text-amber-300/70 transition hover:rotate-90 hover:text-amber-200">
+      ×
+    </button>
+    <h2 id="signup-title" class="font-RobotoCondensed mb-2 text-center text-3xl font-semibold text-amber-200">
+      Create Account
+    </h2>
+    <p class="mb-6 text-center text-sm text-white/60">
+      Join <span class="font-GreatVibes text-amber-400">Promise</span> and begin
+      exploring.
+    </p>
+    <form id="signup-form" class="space-y-5">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div>
+          <label for="reg-first" class="mb-1 block text-sm font-medium text-amber-100">First Name</label>
+          <input id="reg-first" type="text" autocomplete="given-name"
+            class="w-full rounded-md border border-white/10 bg-[#0b0b0b] px-3 py-2 text-white placeholder-white/30 focus:border-amber-400 focus:ring-2 focus:ring-amber-500/50 focus:outline-none" />
+          <p data-error-for="reg-first" class="mt-1 hidden text-xs font-medium text-red-400"></p>
+        </div>
+        <div>
+          <label for="reg-last" class="mb-1 block text-sm font-medium text-amber-100">Last Name</label>
+          <input id="reg-last" type="text" autocomplete="family-name"
+            class="w-full rounded-md border border-white/10 bg-[#0b0b0b] px-3 py-2 text-white placeholder-white/30 focus:border-amber-400 focus:ring-2 focus:ring-amber-500/50 focus:outline-none" />
+          <p data-error-for="reg-last" class="mt-1 hidden text-xs font-medium text-red-400"></p>
+        </div>
       </div>
       <div>
-        <label class="mb-1 block text-sm text-amber-100">Password</label>
-        <input type="password" required
-          class="w-full rounded-md border border-gray-700 bg-[#0b0b0b] px-3 py-2 text-white" />
+        <label for="reg-address" class="mb-1 block text-sm font-medium text-amber-100">Address</label>
+        <input id="reg-address" type="text" autocomplete="street-address"
+          class="w-full rounded-md border border-white/10 bg-[#0b0b0b] px-3 py-2 text-white placeholder-white/30 focus:border-amber-400 focus:ring-2 focus:ring-amber-500/50 focus:outline-none" />
+        <p data-error-for="reg-address" class="mt-1 hidden text-xs font-medium text-red-400"></p>
       </div>
-      <div>
-        <label class="mb-1 block text-sm text-amber-100">Confirm Password</label>
-        <input type="password" required
-          class="w-full rounded-md border border-gray-700 bg-[#0b0b0b] px-3 py-2 text-white" />
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div>
+          <label for="reg-email" class="mb-1 block text-sm font-medium text-amber-100">Email</label>
+          <input id="reg-email" type="email" autocomplete="email"
+            class="w-full rounded-md border border-white/10 bg-[#0b0b0b] px-3 py-2 text-white placeholder-white/30 focus:border-amber-400 focus:ring-2 focus:ring-amber-500/50 focus:outline-none" />
+          <p data-error-for="reg-email" class="mt-1 hidden text-xs font-medium text-red-400"></p>
+        </div>
+        <div>
+          <label for="reg-phone" class="mb-1 block text-sm font-medium text-amber-100">Contact Number</label>
+          <input id="reg-phone" type="text" autocomplete="tel"
+            class="w-full rounded-md border border-white/10 bg-[#0b0b0b] px-3 py-2 text-white placeholder-white/30 focus:border-amber-400 focus:ring-2 focus:ring-amber-500/50 focus:outline-none" />
+          <p data-error-for="reg-phone" class="mt-1 hidden text-xs font-medium text-red-400"></p>
+        </div>
       </div>
-      <div class="flex items-center justify-between">
-        <button type="submit" class="cursor-pointer rounded-md bg-amber-500 px-4 py-2 font-semibold text-black">
-          Create account
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div>
+          <label for="reg-pass" class="mb-1 block text-sm font-medium text-amber-100">Password</label>
+          <input id="reg-pass" type="password" autocomplete="new-password"
+            class="w-full rounded-md border border-white/10 bg-[#0b0b0b] px-3 py-2 text-white placeholder-white/30 focus:border-amber-400 focus:ring-2 focus:ring-amber-500/50 focus:outline-none" />
+          <p data-error-for="reg-pass" class="mt-1 hidden text-xs font-medium text-red-400"></p>
+        </div>
+        <div>
+          <label for="reg-pass-confirm" class="mb-1 block text-sm font-medium text-amber-100">Confirm Password</label>
+          <input id="reg-pass-confirm" type="password" autocomplete="new-password"
+            class="w-full rounded-md border border-white/10 bg-[#0b0b0b] px-3 py-2 text-white placeholder-white/30 focus:border-amber-400 focus:ring-2 focus:ring-amber-500/50 focus:outline-none" />
+          <p data-error-for="reg-pass-confirm" class="mt-1 hidden text-xs font-medium text-red-400"></p>
+        </div>
+      </div>
+      <div class="pt-2">
+        <button type="submit"
+          class="w-full cursor-pointer rounded-full bg-amber-500 px-6 py-2 font-semibold text-black transition hover:shadow-[0_0_25px_rgba(255,160,0,0.55)] focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none">
+          Create Account
         </button>
-        <button type="button" id="switch-to-login" class="cursor-pointer text-sm text-amber-300 underline">
-          Already have an account?
+      </div>
+      <div class="cursor-pointer text-center text-sm text-white/60">
+        Already have an account?
+        <button type="button" id="switch-to-login"
+          class="cursor-pointer text-amber-400 underline decoration-amber-400/40 underline-offset-4 hover:text-amber-300">
+          Sign in
         </button>
       </div>
     </form>
