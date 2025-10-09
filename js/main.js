@@ -1,20 +1,28 @@
 $(document).ready(function () {
-  // loads the modal
+  // --- loads the modal ---
   $.get("/components/modal.html", function (data) {
     $("body").append(data);
     initializeModalLogic();
   });
 
-  // navbar toggle
-  $("#nav-toggle").click(function () {
-    const menu = $("#nav-menu");
-    menu.slideToggle(200);
+  // --- navbar toggle ---
+  const $toggle = $("#nav-toggle");
+  const $menu = $("#nav-menu");
+
+  $toggle.click(function () {
+    $menu.slideToggle(200);
     const expanded = $(this).attr("aria-expanded") === "true";
     $(this).attr("aria-expanded", !expanded);
     $(this).find("svg").toggleClass("rotate-90");
   });
 
-  // login/signup
+  $(window).on("resize", function () {
+    if ($(window).width() >= 768) {
+      $menu.removeAttr("style");
+    }
+  });
+
+  // --- login/signup ---
   function initializeModalLogic() {
     let formSubmitted = false;
 
@@ -169,6 +177,7 @@ $(document).ready(function () {
       const $overlay = $("#modal-overlay");
       $overlay.removeClass("hidden");
       $overlay.css("display", "flex");
+      $("body").addClass("overflow-hidden");
       $(".modal-panel").each(function () {
         $(this).hide();
       });
@@ -176,6 +185,10 @@ $(document).ready(function () {
       $m.addClass("opacity-0 scale-95");
       animateIn($m);
       $m.find("input").first().focus();
+      updateScrollShadows($m[0]);
+      $m.off("scroll.__shadow").on("scroll.__shadow", function () {
+        updateScrollShadows(this);
+      });
     }
 
     function closeModals() {
@@ -185,6 +198,7 @@ $(document).ready(function () {
       });
       setTimeout(() => {
         $overlay.addClass("hidden").hide();
+        $("body").removeClass("overflow-hidden");
         formSubmitted = false;
         $overlay.find("input").val("");
         $overlay.find("[data-error-for]").text("").addClass("hidden");
@@ -194,6 +208,21 @@ $(document).ready(function () {
             "border-red-400 focus:border-red-400 focus:ring-red-400",
           );
       }, 200);
+    }
+
+    // --- scroll shadow  ---
+    function updateScrollShadows(el) {
+      const $el = $(el);
+      const top = el.scrollTop;
+      const max = el.scrollHeight - el.clientHeight - 1;
+      const atTop = top <= 0;
+      const atBottom = top >= max;
+      const $top = $el.find(".shadow-top");
+      const $bottom = $el.find(".shadow-bottom");
+      $top.toggleClass("opacity-0", atTop).toggleClass("opacity-100", !atTop);
+      $bottom
+        .toggleClass("opacity-0", atBottom)
+        .toggleClass("opacity-100", !atBottom);
     }
 
     // open login

@@ -21,3 +21,49 @@
   --animate-glow: glow 1s infinite alternate;
   --animate-glow-slow: glow 2s infinite alternate;
 }
+
+/* custom scrollbar */
+@layer base {
+
+  :root,
+  html,
+  body {
+    scrollbar-gutter: stable;
+  }
+
+  .modal-panel {
+    scrollbar-gutter: stable;
+  }
+
+  /* prevent layout shift when scrollbar appears */
+  :where(.overflow-auto, .overflow-y-auto, .overflow-x-auto) {
+    scrollbar-gutter: auto;
+  }
+
+  /* for chrome, edge, or safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 9999px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, #fbbf24, #d97706);
+    border-radius: 9999px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(to bottom, #facc15, #f59e0b);
+    box-shadow: 0 0 0 1px rgba(217, 119, 6, 0.2), 0 0 10px rgba(251, 191, 36, 0.35);
+  }
+
+  /* for firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #d97706 transparent;
+  }
+}
