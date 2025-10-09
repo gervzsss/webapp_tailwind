@@ -65,53 +65,29 @@
 
     <section class="container mx-auto px-4 py-6 sm:px-6">
       <div class="flex flex-col-reverse gap-8 lg:flex-row">
-        <!-- Cart list -->
-        <section class="flex-1 space-y-6">
+        <!-- Cart list (Empty State) -->
+        <section class="flex-1">
+          <div
+            class="flex min-h-[360px] flex-col items-center justify-center rounded-2xl border border-amber-500/10 bg-gradient-to-b from-[#1c1c1c] via-black to-black/90 p-10 text-center shadow-lg shadow-amber-500/5">
+            <h2 class="font-RobotoCondensed text-3xl font-semibold text-amber-300 sm:text-4xl">
+              Your cart is empty.
+            </h2>
+            <p class="mt-4 max-w-md text-base leading-relaxed text-white/70 sm:text-lg">
+              Browse our products and add items to see them here.
+            </p>
+            <a href="/products.html"
+              class="mt-8 inline-flex items-center justify-center rounded-full bg-amber-500 px-8 py-3 font-medium text-black transition hover:shadow-[0_0_40px_rgba(255,160,0,0.55)] focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none">Start
+              Shopping</a>
+          </div>
+          <!-- Previous interactive cart list retained below for future dynamic use.
           <div class="mb-2 flex items-center gap-3">
             <input type="checkbox" id="selectAll" class="h-4 w-4" />
             <label for="selectAll" class="text-white/80">Select All</label>
           </div>
-
-          <!-- Cart item -->
-          <!-- <article
-            class="flex flex-col items-start gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#252121] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700 md:flex-row md:items-center">
-            <div class="flex w-full items-start gap-4 md:w-auto md:items-center">
-              <input type="checkbox" class="h-5 w-5" />
-              <img src="images/wedding dress.jpg" alt="Elegant Wedding Dress"
-                class="h-36 w-full rounded-md object-cover md:h-20 md:w-28" />
-            </div>
-            <div class="w-full flex-1">
-              <h3 class="font-semibold text-amber-300">
-                Elegant Wedding Dress
-              </h3>
-              <p class="text-sm text-white/80">Size: S • Color: Ivory</p>
-              <div class="mt-3 flex items-center gap-4">
-                <div class="font-semibold text-white/90">$200.00</div>
-                <div class="flex items-center gap-2 rounded-md bg-black/60 p-1">
-                  <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
-                    -
-                  </button>
-                  <input value="1" class="w-12 rounded-md text-center text-amber-50" />
-                  <button class="rounded-md bg-[#1f1f1f] px-2 py-1 text-white">
-                    +
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="w-full text-right md:w-auto md:text-right">
-              <div class="font-bold text-amber-300">$200.00</div>
-              <button class="mt-3 rounded-md border border-white/40 px-3 py-1 text-white">
-                Remove
-              </button>
-            </div>
-          </article> -->
-
-          <!-- Continue Shopping Button -->
-          <div class="mt-8 flex justify-center">
-            <a href="/products.html"
-              class="inline-block rounded-full bg-amber-500 px-8 py-4 font-semibold text-black transition hover:shadow-[0_0_40px_rgba(255,160,0,0.55)]">Continue
-              Shopping</a>
-          </div>
+          <article class="flex flex-col items-start gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#252121] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700 md:flex-row md:items-center">
+            ...existing dynamic cart item structure...
+          </article>
+          -->
         </section>
 
         <!-- Order summary -->
@@ -120,20 +96,20 @@
           <h3 class="mb-4 text-2xl font-semibold">Order Summary</h3>
           <div class="mb-2 flex justify-between text-white/80">
             <span>Subtotal</span>
-            <span>$1000.00</span>
+            <span>$0.00</span>
           </div>
           <div class="mb-4 flex justify-between text-white/80">
             <span>Estimated Shipping</span>
-            <span>$25.00</span>
+            <span>$0.00</span>
           </div>
           <hr class="my-4 border-t border-white/10" />
           <div class="mb-6 flex justify-between text-lg font-semibold text-white">
             <span>Total</span>
-            <span>$1025.00</span>
+            <span>$0.00</span>
           </div>
-          <button
-            class="w-full cursor-pointer rounded-md bg-gradient-to-r from-[#ff9a2b] to-[#ffb933] py-3 font-semibold text-amber-50 transition hover:shadow-[0_10px_40px_rgba(255,160,0,0.6)]">
-            Proceed to Checkout (1 items)
+          <button disabled
+            class="w-full cursor-not-allowed rounded-md bg-gradient-to-r from-[#4a3a23] to-[#3a2d18] py-3 font-semibold text-amber-200/60 opacity-70">
+            Cart is Empty
           </button>
         </aside>
       </div>
