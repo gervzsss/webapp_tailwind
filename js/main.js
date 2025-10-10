@@ -55,6 +55,27 @@ $(document).ready(function () {
       }, 2800);
     }
 
+    // --- password visibility toggle ---
+    $(document).on("click", ".password-toggle", function (e) {
+      e.preventDefault();
+      var $btn = $(this);
+      var targetSelector = $btn.attr("data-target");
+      var $input = $(targetSelector);
+      if (!$input.length) return;
+      var isPassword = $input.attr("type") === "password";
+      $input.attr("type", isPassword ? "text" : "password");
+      var $svg = $btn.find("svg");
+      if (isPassword) {
+        $svg.html(
+          '<path stroke-linecap="round" stroke-linejoin="round" d="M3 3l18 18M10.73 6.73A9.77 9.77 0 0 1 12 6c4.477 0 8.268 2.943 9.542 7a9.77 9.77 0 0 1-1.566 2.566M17.94 17.94A9.77 9.77 0 0 1 12 19c-4.477 0-8.268-2.943-9.542-7a9.77 9.77 0 0 1 1.566-2.566" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 0 1-6 0" />',
+        );
+      } else {
+        $svg.html(
+          '<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />',
+        );
+      }
+    });
+
     // --- validation regex ---
     const nameRegex = /^[A-Za-z\s.\-']+$/;
     const emailRegex = /^[A-Za-z0-9._\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$/;
