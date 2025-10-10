@@ -140,14 +140,14 @@
                 class="text-red-500">*</span></label>
             <input id="contact-name" name="name" autocomplete="name"
               class="w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-black focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
-            <div class="contact-error hidden text-xs text-red-600 mt-1" data-error-for="contact-name"></div>
+            <div class="contact-error mt-1 hidden text-xs text-red-600" data-error-for="contact-name"></div>
           </div>
           <div>
             <label for="contact-email" class="mb-1 block text-sm text-amber-100">Email <span
                 class="text-red-500">*</span></label>
             <input id="contact-email" name="email" autocomplete="email"
               class="w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-black focus:border-amber-500 focus:ring-1 focus:ring-amber-500" />
-            <div class="contact-error hidden text-xs text-red-600 mt-1" data-error-for="contact-email"></div>
+            <div class="contact-error mt-1 hidden text-xs text-red-600" data-error-for="contact-email"></div>
           </div>
           <div>
             <label for="contact-subject" class="mb-1 block text-sm text-amber-100">Subject</label>
@@ -158,11 +158,11 @@
             <label for="contact-message" class="mb-1 block text-sm text-amber-100">Message <span
                 class="text-red-500">*</span></label>
             <textarea id="contact-message" name="message"
-              class="h-32 w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-black resize-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"></textarea>
-            <div class="contact-error hidden text-xs text-red-600 mt-1" data-error-for="contact-message"></div>
+              class="h-32 w-full resize-none rounded-md border border-gray-200 bg-white px-3 py-2 text-black focus:border-amber-500 focus:ring-1 focus:ring-amber-500"></textarea>
+            <div class="contact-error mt-1 hidden text-xs text-red-600" data-error-for="contact-message"></div>
           </div>
           <button type="submit"
-            class="w-full rounded-md bg-gradient-to-r from-amber-500 to-amber-600 px-4 py-3 font-semibold text-black shadow-[0_8px_30px_rgba(255,166,0,0.25)] transition hover:shadow-[0_0_30px_rgba(255,214,0,0.35)] focus:outline-none focus:ring-2 focus:ring-amber-500">
+            class="w-full cursor-pointer rounded-md bg-gradient-to-r from-amber-500 to-amber-600 px-4 py-3 font-semibold text-black shadow-[0_8px_30px_rgba(255,166,0,0.25)] transition hover:shadow-[0_0_30px_rgba(255,214,0,0.35)] focus:ring-2 focus:ring-amber-500 focus:outline-none">
             Send Message
           </button>
         </form>
