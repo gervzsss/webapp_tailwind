@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cart - Promise</title>
   <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
-  <link rel="stylesheet" href="dist/styles.css" />
+  <link rel="stylesheet" href="/dist/styles.css" />
 </head>
 
 <body class="flex min-h-screen flex-col bg-black">
@@ -14,7 +14,7 @@
   <nav class="bg-black">
     <div class="container mx-auto flex flex-col items-center justify-between gap-4 p-4 md:flex-row md:gap-0">
       <div class="flex w-full items-center justify-between md:w-auto">
-        <a href="/home.html"
+        <a href="/pages/home.html"
           class="md:text font-GreatVibes animate-glow text-3xl text-amber-300 hover:text-amber-500 lg:pl-15 lg:text-5xl">
           Pro<span class="font-GreatVibes text-amber-50 hover:text-amber-300">mise</span></a>
         <!-- mobile menu button -->
@@ -31,16 +31,16 @@
       <ul id="nav-menu"
         class="hidden flex-col items-center space-y-2 text-center text-lg text-amber-50 sm:text-xl md:flex md:flex-row md:space-y-0 md:space-x-10">
         <li>
-          <a href="/home.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">Home</a>
+          <a href="/pages/home.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">Home</a>
         </li>
         <li>
-          <a href="/products.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">Products</a>
+          <a href="/pages/products.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">Products</a>
         </li>
         <li>
-          <a href="/about.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">About</a>
+          <a href="/pages/about.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">About</a>
         </li>
         <li>
-          <a href="/cart.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">🛒 Cart</a>
+          <a href="/pages/cart.html" class="px-2 align-middle hover:text-yellow-600 md:px-0">🛒 Cart</a>
         </li>
         <li>
           <a href="#" id="open-login" role="button" aria-haspopup="dialog" aria-controls="login-modal"
@@ -65,7 +65,6 @@
 
     <section class="container mx-auto px-4 py-6 sm:px-6">
       <div class="flex flex-col-reverse gap-8 lg:flex-row">
-        <!-- Cart list (Empty State) -->
         <section class="flex-1">
           <div
             class="flex min-h-[360px] flex-col items-center justify-center rounded-2xl border border-amber-500/10 bg-gradient-to-b from-[#1c1c1c] via-black to-black/90 p-10 text-center shadow-lg shadow-amber-500/5">
@@ -75,22 +74,12 @@
             <p class="mt-4 max-w-md text-base leading-relaxed text-white/70 sm:text-lg">
               Browse our products and add items to see them here.
             </p>
-            <a href="/products.html"
+            <a href="/pages/products.html"
               class="mt-8 inline-flex items-center justify-center rounded-full bg-amber-500 px-8 py-3 font-medium text-black transition hover:shadow-[0_0_40px_rgba(255,160,0,0.55)] focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-black focus:outline-none">Start
               Shopping</a>
           </div>
-          <!-- Previous interactive cart list retained below for future dynamic use.
-          <div class="mb-2 flex items-center gap-3">
-            <input type="checkbox" id="selectAll" class="h-4 w-4" />
-            <label for="selectAll" class="text-white/80">Select All</label>
-          </div>
-          <article class="flex flex-col items-start gap-4 rounded-xl border border-transparent bg-gradient-to-r from-[#252121] to-[#0f0f0f] p-4 shadow-lg transition hover:border-amber-700 md:flex-row md:items-center">
-            ...existing dynamic cart item structure...
-          </article>
-          -->
         </section>
 
-        <!-- Order summary -->
         <aside
           class="w-full self-start rounded-xl border border-transparent bg-gradient-to-b from-[#d7c0a2] to-[#111111] p-6 shadow-lg lg:sticky lg:top-24 lg:w-96">
           <h3 class="mb-4 text-2xl font-semibold">Order Summary</h3>
@@ -128,6 +117,7 @@
 
   <script src="/js/jquery-3.7.1.min.js"></script>
   <script src="/js/main.js"></script>
+  <script src="/js/reveal.js"></script>
 </body>
 
 </html>
